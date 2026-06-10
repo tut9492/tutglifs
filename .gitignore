@@ -42,3 +42,7 @@ next-env.d.ts
 
 # dev screenshots
 /tmp-shots/
+
+# machine-specific dev screenshot helpers
+scripts/shot.mjs
+scripts/shot2.mjs
