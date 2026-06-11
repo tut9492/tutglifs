@@ -28,17 +28,15 @@ const rows = Math.ceil(ids.length / cols);
 const records = ids.map((id, i) => {
   const col = i % cols;
   const row = Math.floor(i / cols);
-  // +0.5 to center each cell; small deterministic jitter so it doesn't look like graph paper.
+  // Even grid, centered in each cell. No jitter — clean rows/columns.
   const fx = (col + 0.5) / cols;
   const fy = (row + 0.5) / rows;
-  const jitter = (n) => (Math.sin(n * 12.9898) * 43758.5453 % 1) * 0.5 - 0.25; // [-0.25,0.25)
-  const jx = (jitter(id) / cols);
-  const jy = (jitter(id + 100) / rows);
-  const lng = BOUNDS.minLng + (fx + jx) * (BOUNDS.maxLng - BOUNDS.minLng);
-  const lat = BOUNDS.maxLat - (fy + jy) * (BOUNDS.maxLat - BOUNDS.minLat);
+  const lng = BOUNDS.minLng + fx * (BOUNDS.maxLng - BOUNDS.minLng);
+  const lat = BOUNDS.maxLat - fy * (BOUNDS.maxLat - BOUNDS.minLat);
   return {
     id,
-    src: `/glifs/${id}.gif`,
+    src: `/glifs-static/${id}.png`, // static first-frame thumbnail (smooth render)
+    gif: `/glifs/${id}.gif`,
     lng: Number(lng.toFixed(6)),
     lat: Number(lat.toFixed(6)),
     category: null, // seeded later — see glifs.json contribution guide

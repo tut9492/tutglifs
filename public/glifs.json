@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
-    "src": "/glifs/1.gif",
-    "lng": -74.014446,
-    "lat": 40.802701,
+    "src": "/glifs-static/1.png",
+    "gif": "/glifs/1.gif",
+    "lng": -74.0155,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -11,9 +12,10 @@
   },
   {
     "id": 2,
-    "src": "/glifs/2.gif",
-    "lng": -74.011607,
-    "lat": 40.805263,
+    "src": "/glifs-static/2.png",
+    "gif": "/glifs/2.gif",
+    "lng": -74.0105,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -21,9 +23,10 @@
   },
   {
     "id": 3,
-    "src": "/glifs/3.gif",
-    "lng": -74.005354,
-    "lat": 40.805003,
+    "src": "/glifs-static/3.png",
+    "gif": "/glifs/3.gif",
+    "lng": -74.0055,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -31,9 +34,10 @@
   },
   {
     "id": 4,
-    "src": "/glifs/4.gif",
-    "lng": -74.000816,
-    "lat": 40.801007,
+    "src": "/glifs-static/4.png",
+    "gif": "/glifs/4.gif",
+    "lng": -74.0005,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "symbols"
@@ -41,9 +45,10 @@
   },
   {
     "id": 5,
-    "src": "/glifs/5.gif",
-    "lng": -73.995616,
-    "lat": 40.79982,
+    "src": "/glifs-static/5.png",
+    "gif": "/glifs/5.gif",
+    "lng": -73.9955,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -51,9 +56,10 @@
   },
   {
     "id": 6,
-    "src": "/glifs/6.gif",
-    "lng": -73.990185,
-    "lat": 40.801469,
+    "src": "/glifs-static/6.png",
+    "gif": "/glifs/6.gif",
+    "lng": -73.9905,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -61,9 +67,10 @@
   },
   {
     "id": 7,
-    "src": "/glifs/7.gif",
-    "lng": -73.986336,
-    "lat": 40.800783,
+    "src": "/glifs-static/7.png",
+    "gif": "/glifs/7.gif",
+    "lng": -73.9855,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "animals"
@@ -71,9 +78,10 @@
   },
   {
     "id": 8,
-    "src": "/glifs/8.gif",
-    "lng": -73.983427,
-    "lat": 40.800349,
+    "src": "/glifs-static/8.png",
+    "gif": "/glifs/8.gif",
+    "lng": -73.9805,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -81,9 +89,10 @@
   },
   {
     "id": 9,
-    "src": "/glifs/9.gif",
-    "lng": -73.977901,
-    "lat": 40.799665,
+    "src": "/glifs-static/9.png",
+    "gif": "/glifs/9.gif",
+    "lng": -73.9755,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -91,9 +100,10 @@
   },
   {
     "id": 10,
-    "src": "/glifs/10.gif",
-    "lng": -73.971821,
-    "lat": 40.801876,
+    "src": "/glifs-static/10.png",
+    "gif": "/glifs/10.gif",
+    "lng": -73.9705,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -101,9 +111,10 @@
   },
   {
     "id": 11,
-    "src": "/glifs/11.gif",
-    "lng": -73.967197,
-    "lat": 40.800576,
+    "src": "/glifs-static/11.png",
+    "gif": "/glifs/11.gif",
+    "lng": -73.9655,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "circles"
@@ -111,9 +122,10 @@
   },
   {
     "id": 12,
-    "src": "/glifs/12.gif",
-    "lng": -73.963802,
-    "lat": 40.805359,
+    "src": "/glifs-static/12.png",
+    "gif": "/glifs/12.gif",
+    "lng": -73.9605,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "nature"
@@ -121,9 +133,10 @@
   },
   {
     "id": 13,
-    "src": "/glifs/13.gif",
-    "lng": -73.956762,
-    "lat": 40.805406,
+    "src": "/glifs-static/13.png",
+    "gif": "/glifs/13.gif",
+    "lng": -73.9555,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "nature"
@@ -131,9 +144,10 @@
   },
   {
     "id": 14,
-    "src": "/glifs/14.gif",
-    "lng": -73.95221,
-    "lat": 40.804002,
+    "src": "/glifs-static/14.png",
+    "gif": "/glifs/14.gif",
+    "lng": -73.9505,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "circles"
@@ -141,9 +155,10 @@
   },
   {
     "id": 15,
-    "src": "/glifs/15.gif",
-    "lng": -73.945645,
-    "lat": 40.80413,
+    "src": "/glifs-static/15.png",
+    "gif": "/glifs/15.gif",
+    "lng": -73.9455,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -151,9 +166,10 @@
   },
   {
     "id": 16,
-    "src": "/glifs/16.gif",
-    "lng": -73.939433,
-    "lat": 40.804097,
+    "src": "/glifs-static/16.png",
+    "gif": "/glifs/16.gif",
+    "lng": -73.9405,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "figures"
@@ -161,9 +177,10 @@
   },
   {
     "id": 17,
-    "src": "/glifs/17.gif",
-    "lng": -73.935665,
-    "lat": 40.802751,
+    "src": "/glifs-static/17.png",
+    "gif": "/glifs/17.gif",
+    "lng": -73.9355,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "figures"
@@ -171,9 +188,10 @@
   },
   {
     "id": 18,
-    "src": "/glifs/18.gif",
-    "lng": -73.93014,
-    "lat": 40.804295,
+    "src": "/glifs-static/18.png",
+    "gif": "/glifs/18.gif",
+    "lng": -73.9305,
+    "lat": 40.801,
     "tags": [],
     "categories": [
       "faces"
@@ -181,9 +199,10 @@
   },
   {
     "id": 19,
-    "src": "/glifs/19.gif",
-    "lng": -74.015943,
-    "lat": 40.793515,
+    "src": "/glifs-static/19.png",
+    "gif": "/glifs/19.gif",
+    "lng": -74.0155,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "symbols"
@@ -191,9 +210,10 @@
   },
   {
     "id": 20,
-    "src": "/glifs/20.gif",
-    "lng": -74.009849,
-    "lat": 40.795696,
+    "src": "/glifs-static/20.png",
+    "gif": "/glifs/20.gif",
+    "lng": -74.0105,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "figures"
@@ -201,9 +221,10 @@
   },
   {
     "id": 21,
-    "src": "/glifs/21.gif",
-    "lng": -74.00536,
-    "lat": 40.794212,
+    "src": "/glifs-static/21.png",
+    "gif": "/glifs/21.gif",
+    "lng": -74.0055,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "faces"
@@ -211,9 +232,10 @@
   },
   {
     "id": 22,
-    "src": "/glifs/22.gif",
-    "lng": -74.000098,
-    "lat": 40.793578,
+    "src": "/glifs-static/22.png",
+    "gif": "/glifs/22.gif",
+    "lng": -74.0005,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "faces"
@@ -221,9 +243,10 @@
   },
   {
     "id": 23,
-    "src": "/glifs/23.gif",
-    "lng": -73.998202,
-    "lat": 40.79618,
+    "src": "/glifs-static/23.png",
+    "gif": "/glifs/23.gif",
+    "lng": -73.9955,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "figures"
@@ -231,9 +254,10 @@
   },
   {
     "id": 24,
-    "src": "/glifs/24.gif",
-    "lng": -73.993911,
-    "lat": 40.796497,
+    "src": "/glifs-static/24.png",
+    "gif": "/glifs/24.gif",
+    "lng": -73.9905,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "figures"
@@ -241,9 +265,10 @@
   },
   {
     "id": 25,
-    "src": "/glifs/25.gif",
-    "lng": -73.988424,
-    "lat": 40.794306,
+    "src": "/glifs-static/25.png",
+    "gif": "/glifs/25.gif",
+    "lng": -73.9855,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "animals"
@@ -251,9 +276,10 @@
   },
   {
     "id": 26,
-    "src": "/glifs/26.gif",
-    "lng": -73.983012,
-    "lat": 40.795582,
+    "src": "/glifs-static/26.png",
+    "gif": "/glifs/26.gif",
+    "lng": -73.9805,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "figures"
@@ -261,9 +287,10 @@
   },
   {
     "id": 27,
-    "src": "/glifs/27.gif",
-    "lng": -73.979249,
-    "lat": 40.798872,
+    "src": "/glifs-static/27.png",
+    "gif": "/glifs/27.gif",
+    "lng": -73.9755,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "nature"
@@ -271,9 +298,10 @@
   },
   {
     "id": 28,
-    "src": "/glifs/28.gif",
-    "lng": -73.973845,
-    "lat": 40.796697,
+    "src": "/glifs-static/28.png",
+    "gif": "/glifs/28.gif",
+    "lng": -73.9705,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "hands"
@@ -281,9 +309,10 @@
   },
   {
     "id": 29,
-    "src": "/glifs/29.gif",
-    "lng": -73.9682,
-    "lat": 40.798691,
+    "src": "/glifs-static/29.png",
+    "gif": "/glifs/29.gif",
+    "lng": -73.9655,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "figures"
@@ -291,9 +320,10 @@
   },
   {
     "id": 30,
-    "src": "/glifs/30.gif",
-    "lng": -73.959287,
-    "lat": 40.798201,
+    "src": "/glifs-static/30.png",
+    "gif": "/glifs/30.gif",
+    "lng": -73.9605,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "symbols"
@@ -301,9 +331,10 @@
   },
   {
     "id": 31,
-    "src": "/glifs/31.gif",
-    "lng": -73.954941,
-    "lat": 40.797057,
+    "src": "/glifs-static/31.png",
+    "gif": "/glifs/31.gif",
+    "lng": -73.9555,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "faces"
@@ -311,9 +342,10 @@
   },
   {
     "id": 32,
-    "src": "/glifs/32.gif",
-    "lng": -73.951036,
-    "lat": 40.797176,
+    "src": "/glifs-static/32.png",
+    "gif": "/glifs/32.gif",
+    "lng": -73.9505,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "nature"
@@ -321,9 +353,10 @@
   },
   {
     "id": 33,
-    "src": "/glifs/33.gif",
-    "lng": -73.945705,
-    "lat": 40.799445,
+    "src": "/glifs-static/33.png",
+    "gif": "/glifs/33.gif",
+    "lng": -73.9455,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "items"
@@ -331,9 +364,10 @@
   },
   {
     "id": 34,
-    "src": "/glifs/34.gif",
-    "lng": -73.941249,
-    "lat": 40.794795,
+    "src": "/glifs-static/34.png",
+    "gif": "/glifs/34.gif",
+    "lng": -73.9405,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "faces"
@@ -341,9 +375,10 @@
   },
   {
     "id": 35,
-    "src": "/glifs/35.gif",
-    "lng": -73.93531,
-    "lat": 40.794053,
+    "src": "/glifs-static/35.png",
+    "gif": "/glifs/35.gif",
+    "lng": -73.9355,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "items"
@@ -351,9 +386,10 @@
   },
   {
     "id": 36,
-    "src": "/glifs/36.gif",
-    "lng": -73.929296,
-    "lat": 40.796068,
+    "src": "/glifs-static/36.png",
+    "gif": "/glifs/36.gif",
+    "lng": -73.9305,
+    "lat": 40.795,
     "tags": [],
     "categories": [
       "faces"
@@ -361,9 +397,10 @@
   },
   {
     "id": 37,
-    "src": "/glifs/37.gif",
-    "lng": -74.014449,
-    "lat": 40.788077,
+    "src": "/glifs-static/37.png",
+    "gif": "/glifs/37.gif",
+    "lng": -74.0155,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "circles"
@@ -371,9 +408,10 @@
   },
   {
     "id": 38,
-    "src": "/glifs/38.gif",
-    "lng": -74.013074,
-    "lat": 40.788025,
+    "src": "/glifs-static/38.png",
+    "gif": "/glifs/38.gif",
+    "lng": -74.0105,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "circles"
@@ -381,9 +419,10 @@
   },
   {
     "id": 39,
-    "src": "/glifs/39.gif",
-    "lng": -74.007329,
-    "lat": 40.789912,
+    "src": "/glifs-static/39.png",
+    "gif": "/glifs/39.gif",
+    "lng": -74.0055,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "symbols"
@@ -391,9 +430,10 @@
   },
   {
     "id": 40,
-    "src": "/glifs/40.gif",
-    "lng": -74.002758,
-    "lat": 40.789178,
+    "src": "/glifs-static/40.png",
+    "gif": "/glifs/40.gif",
+    "lng": -74.0005,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "nature"
@@ -401,9 +441,10 @@
   },
   {
     "id": 41,
-    "src": "/glifs/41.gif",
-    "lng": -73.996914,
-    "lat": 40.791177,
+    "src": "/glifs-static/41.png",
+    "gif": "/glifs/41.gif",
+    "lng": -73.9955,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -411,9 +452,10 @@
   },
   {
     "id": 42,
-    "src": "/glifs/42.gif",
-    "lng": -73.993117,
-    "lat": 40.791192,
+    "src": "/glifs-static/42.png",
+    "gif": "/glifs/42.gif",
+    "lng": -73.9905,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "symbols"
@@ -421,9 +463,10 @@
   },
   {
     "id": 43,
-    "src": "/glifs/43.gif",
-    "lng": -73.988711,
-    "lat": 40.790902,
+    "src": "/glifs-static/43.png",
+    "gif": "/glifs/43.gif",
+    "lng": -73.9855,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -431,9 +474,10 @@
   },
   {
     "id": 44,
-    "src": "/glifs/44.gif",
-    "lng": -73.982513,
-    "lat": 40.793251,
+    "src": "/glifs-static/44.png",
+    "gif": "/glifs/44.gif",
+    "lng": -73.9805,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "symbols"
@@ -441,9 +485,10 @@
   },
   {
     "id": 45,
-    "src": "/glifs/45.gif",
-    "lng": -73.97476,
-    "lat": 40.791332,
+    "src": "/glifs-static/45.png",
+    "gif": "/glifs/45.gif",
+    "lng": -73.9755,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "figures"
@@ -451,9 +496,10 @@
   },
   {
     "id": 46,
-    "src": "/glifs/46.gif",
-    "lng": -73.971042,
-    "lat": 40.790999,
+    "src": "/glifs-static/46.png",
+    "gif": "/glifs/46.gif",
+    "lng": -73.9705,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "circles"
@@ -461,9 +507,10 @@
   },
   {
     "id": 47,
-    "src": "/glifs/47.gif",
-    "lng": -73.965465,
-    "lat": 40.790712,
+    "src": "/glifs-static/47.png",
+    "gif": "/glifs/47.gif",
+    "lng": -73.9655,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -471,9 +518,10 @@
   },
   {
     "id": 48,
-    "src": "/glifs/48.gif",
-    "lng": -73.961394,
-    "lat": 40.791697,
+    "src": "/glifs-static/48.png",
+    "gif": "/glifs/48.gif",
+    "lng": -73.9605,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -481,9 +529,10 @@
   },
   {
     "id": 49,
-    "src": "/glifs/49.gif",
-    "lng": -73.956464,
-    "lat": 40.789056,
+    "src": "/glifs-static/49.png",
+    "gif": "/glifs/49.gif",
+    "lng": -73.9555,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "hands"
@@ -491,9 +540,10 @@
   },
   {
     "id": 50,
-    "src": "/glifs/50.gif",
-    "lng": -73.950995,
-    "lat": 40.787784,
+    "src": "/glifs-static/50.png",
+    "gif": "/glifs/50.gif",
+    "lng": -73.9505,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -501,9 +551,10 @@
   },
   {
     "id": 51,
-    "src": "/glifs/51.gif",
-    "lng": -73.94646,
-    "lat": 40.79045,
+    "src": "/glifs-static/51.png",
+    "gif": "/glifs/51.gif",
+    "lng": -73.9455,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "faces"
@@ -511,9 +562,10 @@
   },
   {
     "id": 52,
-    "src": "/glifs/52.gif",
-    "lng": -73.94222,
-    "lat": 40.790255,
+    "src": "/glifs-static/52.png",
+    "gif": "/glifs/52.gif",
+    "lng": -73.9405,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "animals"
@@ -521,9 +573,10 @@
   },
   {
     "id": 53,
-    "src": "/glifs/53.gif",
-    "lng": -73.937865,
-    "lat": 40.78837,
+    "src": "/glifs-static/53.png",
+    "gif": "/glifs/53.gif",
+    "lng": -73.9355,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "animals"
@@ -531,9 +584,10 @@
   },
   {
     "id": 54,
-    "src": "/glifs/54.gif",
-    "lng": -73.933238,
-    "lat": 40.788934,
+    "src": "/glifs-static/54.png",
+    "gif": "/glifs/54.gif",
+    "lng": -73.9305,
+    "lat": 40.789,
     "tags": [],
     "categories": [
       "figures"
@@ -541,9 +595,10 @@
   },
   {
     "id": 55,
-    "src": "/glifs/55.gif",
-    "lng": -74.017068,
-    "lat": 40.781823,
+    "src": "/glifs-static/55.png",
+    "gif": "/glifs/55.gif",
+    "lng": -74.0155,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "animals"
@@ -551,9 +606,10 @@
   },
   {
     "id": 56,
-    "src": "/glifs/56.gif",
-    "lng": -74.013063,
-    "lat": 40.784653,
+    "src": "/glifs-static/56.png",
+    "gif": "/glifs/56.gif",
+    "lng": -74.0105,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "symbols"
@@ -561,9 +617,10 @@
   },
   {
     "id": 57,
-    "src": "/glifs/57.gif",
-    "lng": -74.008688,
-    "lat": 40.785932,
+    "src": "/glifs-static/57.png",
+    "gif": "/glifs/57.gif",
+    "lng": -74.0055,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "hands"
@@ -571,9 +628,10 @@
   },
   {
     "id": 58,
-    "src": "/glifs/58.gif",
-    "lng": -74.003477,
-    "lat": 40.786743,
+    "src": "/glifs-static/58.png",
+    "gif": "/glifs/58.gif",
+    "lng": -74.0005,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "hands"
@@ -581,9 +639,10 @@
   },
   {
     "id": 59,
-    "src": "/glifs/59.gif",
-    "lng": -73.998813,
-    "lat": 40.786506,
+    "src": "/glifs-static/59.png",
+    "gif": "/glifs/59.gif",
+    "lng": -73.9955,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "circles"
@@ -591,9 +650,10 @@
   },
   {
     "id": 60,
-    "src": "/glifs/60.gif",
-    "lng": -73.991325,
-    "lat": 40.784775,
+    "src": "/glifs-static/60.png",
+    "gif": "/glifs/60.gif",
+    "lng": -73.9905,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "animals"
@@ -601,9 +661,10 @@
   },
   {
     "id": 61,
-    "src": "/glifs/61.gif",
-    "lng": -73.986545,
-    "lat": 40.785851,
+    "src": "/glifs-static/61.png",
+    "gif": "/glifs/61.gif",
+    "lng": -73.9855,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "items"
@@ -611,9 +672,10 @@
   },
   {
     "id": 62,
-    "src": "/glifs/62.gif",
-    "lng": -73.979723,
-    "lat": 40.787268,
+    "src": "/glifs-static/62.png",
+    "gif": "/glifs/62.gif",
+    "lng": -73.9805,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "circles"
@@ -621,9 +683,10 @@
   },
   {
     "id": 63,
-    "src": "/glifs/63.gif",
-    "lng": -73.976708,
-    "lat": 40.785953,
+    "src": "/glifs-static/63.png",
+    "gif": "/glifs/63.gif",
+    "lng": -73.9755,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "hands"
@@ -631,9 +694,10 @@
   },
   {
     "id": 64,
-    "src": "/glifs/64.gif",
-    "lng": -73.97153,
-    "lat": 40.783967,
+    "src": "/glifs-static/64.png",
+    "gif": "/glifs/64.gif",
+    "lng": -73.9705,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "circles"
@@ -641,9 +705,10 @@
   },
   {
     "id": 65,
-    "src": "/glifs/65.gif",
-    "lng": -73.966556,
-    "lat": 40.783141,
+    "src": "/glifs-static/65.png",
+    "gif": "/glifs/65.gif",
+    "lng": -73.9655,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "animals"
@@ -651,9 +716,10 @@
   },
   {
     "id": 66,
-    "src": "/glifs/66.gif",
-    "lng": -73.960256,
-    "lat": 40.782323,
+    "src": "/glifs-static/66.png",
+    "gif": "/glifs/66.gif",
+    "lng": -73.9605,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "faces"
@@ -661,9 +727,10 @@
   },
   {
     "id": 67,
-    "src": "/glifs/67.gif",
-    "lng": -73.958646,
-    "lat": 40.782261,
+    "src": "/glifs-static/67.png",
+    "gif": "/glifs/67.gif",
+    "lng": -73.9555,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "items"
@@ -671,9 +738,10 @@
   },
   {
     "id": 68,
-    "src": "/glifs/68.gif",
-    "lng": -73.95328,
-    "lat": 40.782988,
+    "src": "/glifs-static/68.png",
+    "gif": "/glifs/68.gif",
+    "lng": -73.9505,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "animals"
@@ -681,9 +749,10 @@
   },
   {
     "id": 69,
-    "src": "/glifs/69.gif",
-    "lng": -73.94843,
-    "lat": 40.782481,
+    "src": "/glifs-static/69.png",
+    "gif": "/glifs/69.gif",
+    "lng": -73.9455,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "nature"
@@ -691,9 +760,10 @@
   },
   {
     "id": 70,
-    "src": "/glifs/70.gif",
-    "lng": -73.94333,
-    "lat": 40.784435,
+    "src": "/glifs-static/70.png",
+    "gif": "/glifs/70.gif",
+    "lng": -73.9405,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "symbols"
@@ -701,9 +771,10 @@
   },
   {
     "id": 71,
-    "src": "/glifs/71.gif",
-    "lng": -73.937982,
-    "lat": 40.785335,
+    "src": "/glifs-static/71.png",
+    "gif": "/glifs/71.gif",
+    "lng": -73.9355,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "faces"
@@ -711,9 +782,10 @@
   },
   {
     "id": 72,
-    "src": "/glifs/72.gif",
-    "lng": -73.933817,
-    "lat": 40.784914,
+    "src": "/glifs-static/72.png",
+    "gif": "/glifs/72.gif",
+    "lng": -73.9305,
+    "lat": 40.783,
     "tags": [],
     "categories": [
       "circles"
@@ -721,9 +793,10 @@
   },
   {
     "id": 73,
-    "src": "/glifs/73.gif",
-    "lng": -74.019178,
-    "lat": 40.7791,
+    "src": "/glifs-static/73.png",
+    "gif": "/glifs/73.gif",
+    "lng": -74.0155,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -731,9 +804,10 @@
   },
   {
     "id": 74,
-    "src": "/glifs/74.gif",
-    "lng": -74.013774,
-    "lat": 40.780007,
+    "src": "/glifs-static/74.png",
+    "gif": "/glifs/74.gif",
+    "lng": -74.0105,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -741,9 +815,10 @@
   },
   {
     "id": 75,
-    "src": "/glifs/75.gif",
-    "lng": -74.005263,
-    "lat": 40.7796,
+    "src": "/glifs-static/75.png",
+    "gif": "/glifs/75.gif",
+    "lng": -74.0055,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -751,9 +826,10 @@
   },
   {
     "id": 76,
-    "src": "/glifs/76.gif",
-    "lng": -74.001365,
-    "lat": 40.780956,
+    "src": "/glifs-static/76.png",
+    "gif": "/glifs/76.gif",
+    "lng": -74.0005,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "symbols"
@@ -761,9 +837,10 @@
   },
   {
     "id": 77,
-    "src": "/glifs/77.gif",
-    "lng": -73.995018,
-    "lat": 40.780334,
+    "src": "/glifs-static/77.png",
+    "gif": "/glifs/77.gif",
+    "lng": -73.9955,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "circles"
@@ -771,9 +848,10 @@
   },
   {
     "id": 78,
-    "src": "/glifs/78.gif",
-    "lng": -73.99129,
-    "lat": 40.77858,
+    "src": "/glifs-static/78.png",
+    "gif": "/glifs/78.gif",
+    "lng": -73.9905,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "figures"
@@ -781,9 +859,10 @@
   },
   {
     "id": 79,
-    "src": "/glifs/79.gif",
-    "lng": -73.98664,
-    "lat": 40.777467,
+    "src": "/glifs-static/79.png",
+    "gif": "/glifs/79.gif",
+    "lng": -73.9855,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "faces"
@@ -791,9 +870,10 @@
   },
   {
     "id": 80,
-    "src": "/glifs/80.gif",
-    "lng": -73.979915,
-    "lat": 40.775581,
+    "src": "/glifs-static/80.png",
+    "gif": "/glifs/80.gif",
+    "lng": -73.9805,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "symbols"
@@ -801,9 +881,10 @@
   },
   {
     "id": 81,
-    "src": "/glifs/81.gif",
-    "lng": -73.975671,
-    "lat": 40.777104,
+    "src": "/glifs-static/81.png",
+    "gif": "/glifs/81.gif",
+    "lng": -73.9755,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "figures"
@@ -811,9 +892,10 @@
   },
   {
     "id": 82,
-    "src": "/glifs/82.gif",
-    "lng": -73.974026,
-    "lat": 40.776397,
+    "src": "/glifs-static/82.png",
+    "gif": "/glifs/82.gif",
+    "lng": -73.9705,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "circles"
@@ -821,9 +903,10 @@
   },
   {
     "id": 83,
-    "src": "/glifs/83.gif",
-    "lng": -73.968557,
-    "lat": 40.776016,
+    "src": "/glifs-static/83.png",
+    "gif": "/glifs/83.gif",
+    "lng": -73.9655,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "nature"
@@ -831,9 +914,10 @@
   },
   {
     "id": 84,
-    "src": "/glifs/84.gif",
-    "lng": -73.964015,
-    "lat": 40.778496,
+    "src": "/glifs-static/84.png",
+    "gif": "/glifs/84.gif",
+    "lng": -73.9605,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "faces"
@@ -841,9 +925,10 @@
   },
   {
     "id": 85,
-    "src": "/glifs/85.gif",
-    "lng": -73.958309,
-    "lat": 40.778254,
+    "src": "/glifs-static/85.png",
+    "gif": "/glifs/85.gif",
+    "lng": -73.9555,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -851,9 +936,10 @@
   },
   {
     "id": 86,
-    "src": "/glifs/86.gif",
-    "lng": -73.953038,
-    "lat": 40.778782,
+    "src": "/glifs-static/86.png",
+    "gif": "/glifs/86.gif",
+    "lng": -73.9505,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "hands"
@@ -861,9 +947,10 @@
   },
   {
     "id": 87,
-    "src": "/glifs/87.gif",
-    "lng": -73.948355,
-    "lat": 40.779334,
+    "src": "/glifs-static/87.png",
+    "gif": "/glifs/87.gif",
+    "lng": -73.9455,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -871,9 +958,10 @@
   },
   {
     "id": 88,
-    "src": "/glifs/88.gif",
-    "lng": -73.94314,
-    "lat": 40.780131,
+    "src": "/glifs-static/88.png",
+    "gif": "/glifs/88.gif",
+    "lng": -73.9405,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "items"
@@ -881,9 +969,10 @@
   },
   {
     "id": 89,
-    "src": "/glifs/89.gif",
-    "lng": -73.93693,
-    "lat": 40.781088,
+    "src": "/glifs-static/89.png",
+    "gif": "/glifs/89.gif",
+    "lng": -73.9355,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "nature"
@@ -891,9 +980,10 @@
   },
   {
     "id": 90,
-    "src": "/glifs/90.gif",
-    "lng": -73.929711,
-    "lat": 40.779668,
+    "src": "/glifs-static/90.png",
+    "gif": "/glifs/90.gif",
+    "lng": -73.9305,
+    "lat": 40.777,
     "tags": [],
     "categories": [
       "faces"
@@ -901,9 +991,10 @@
   },
   {
     "id": 91,
-    "src": "/glifs/91.gif",
-    "lng": -74.016396,
-    "lat": 40.774959,
+    "src": "/glifs-static/91.png",
+    "gif": "/glifs/91.gif",
+    "lng": -74.0155,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "hands"
@@ -911,9 +1002,10 @@
   },
   {
     "id": 92,
-    "src": "/glifs/92.gif",
-    "lng": -74.010426,
-    "lat": 40.77381,
+    "src": "/glifs-static/92.png",
+    "gif": "/glifs/92.gif",
+    "lng": -74.0105,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "symbols"
@@ -921,9 +1013,10 @@
   },
   {
     "id": 93,
-    "src": "/glifs/93.gif",
-    "lng": -74.004907,
-    "lat": 40.772217,
+    "src": "/glifs-static/93.png",
+    "gif": "/glifs/93.gif",
+    "lng": -74.0055,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "items"
@@ -931,9 +1024,10 @@
   },
   {
     "id": 94,
-    "src": "/glifs/94.gif",
-    "lng": -73.999798,
-    "lat": 40.769578,
+    "src": "/glifs-static/94.png",
+    "gif": "/glifs/94.gif",
+    "lng": -74.0005,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "faces"
@@ -941,9 +1035,10 @@
   },
   {
     "id": 95,
-    "src": "/glifs/95.gif",
-    "lng": -73.994872,
-    "lat": 40.770617,
+    "src": "/glifs-static/95.png",
+    "gif": "/glifs/95.gif",
+    "lng": -73.9955,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "items"
@@ -951,9 +1046,10 @@
   },
   {
     "id": 96,
-    "src": "/glifs/96.gif",
-    "lng": -73.98943,
-    "lat": 40.771585,
+    "src": "/glifs-static/96.png",
+    "gif": "/glifs/96.gif",
+    "lng": -73.9905,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "symbols"
@@ -961,9 +1057,10 @@
   },
   {
     "id": 97,
-    "src": "/glifs/97.gif",
-    "lng": -73.988884,
-    "lat": 40.77012,
+    "src": "/glifs-static/97.png",
+    "gif": "/glifs/97.gif",
+    "lng": -73.9855,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "nature"
@@ -971,9 +1068,10 @@
   },
   {
     "id": 98,
-    "src": "/glifs/98.gif",
-    "lng": -73.984111,
-    "lat": 40.772023,
+    "src": "/glifs-static/98.png",
+    "gif": "/glifs/98.gif",
+    "lng": -73.9805,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "symbols"
@@ -981,9 +1079,10 @@
   },
   {
     "id": 99,
-    "src": "/glifs/99.gif",
-    "lng": -73.978025,
-    "lat": 40.771097,
+    "src": "/glifs-static/99.png",
+    "gif": "/glifs/99.gif",
+    "lng": -73.9755,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "faces"
@@ -991,9 +1090,10 @@
   },
   {
     "id": 100,
-    "src": "/glifs/100.gif",
-    "lng": -73.97359,
-    "lat": 40.770751,
+    "src": "/glifs-static/100.png",
+    "gif": "/glifs/100.gif",
+    "lng": -73.9705,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "nature"
@@ -1001,9 +1101,10 @@
   },
   {
     "id": 101,
-    "src": "/glifs/101.gif",
-    "lng": -73.966918,
-    "lat": 40.774979,
+    "src": "/glifs-static/101.png",
+    "gif": "/glifs/101.gif",
+    "lng": -73.9655,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "symbols"
@@ -1011,9 +1112,10 @@
   },
   {
     "id": 102,
-    "src": "/glifs/102.gif",
-    "lng": -73.964053,
-    "lat": 40.773933,
+    "src": "/glifs-static/102.png",
+    "gif": "/glifs/102.gif",
+    "lng": -73.9605,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "nature"
@@ -1021,9 +1123,10 @@
   },
   {
     "id": 103,
-    "src": "/glifs/103.gif",
-    "lng": -73.958836,
-    "lat": 40.774386,
+    "src": "/glifs-static/103.png",
+    "gif": "/glifs/103.gif",
+    "lng": -73.9555,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "faces"
@@ -1031,9 +1134,10 @@
   },
   {
     "id": 104,
-    "src": "/glifs/104.gif",
-    "lng": -73.950506,
-    "lat": 40.772895,
+    "src": "/glifs-static/104.png",
+    "gif": "/glifs/104.gif",
+    "lng": -73.9505,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "items"
@@ -1041,9 +1145,10 @@
   },
   {
     "id": 105,
-    "src": "/glifs/105.gif",
-    "lng": -73.944517,
-    "lat": 40.77358,
+    "src": "/glifs-static/105.png",
+    "gif": "/glifs/105.gif",
+    "lng": -73.9455,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "faces"
@@ -1051,9 +1156,10 @@
   },
   {
     "id": 106,
-    "src": "/glifs/106.gif",
-    "lng": -73.940891,
-    "lat": 40.774691,
+    "src": "/glifs-static/106.png",
+    "gif": "/glifs/106.gif",
+    "lng": -73.9405,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "items"
@@ -1061,9 +1167,10 @@
   },
   {
     "id": 107,
-    "src": "/glifs/107.gif",
-    "lng": -73.935319,
-    "lat": 40.77284,
+    "src": "/glifs-static/107.png",
+    "gif": "/glifs/107.gif",
+    "lng": -73.9355,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "hands"
@@ -1071,9 +1178,10 @@
   },
   {
     "id": 108,
-    "src": "/glifs/108.gif",
-    "lng": -73.929958,
-    "lat": 40.769585,
+    "src": "/glifs-static/108.png",
+    "gif": "/glifs/108.gif",
+    "lng": -73.9305,
+    "lat": 40.771,
     "tags": [],
     "categories": [
       "items"
@@ -1081,9 +1189,10 @@
   },
   {
     "id": 109,
-    "src": "/glifs/109.gif",
-    "lng": -74.014387,
-    "lat": 40.765227,
+    "src": "/glifs-static/109.png",
+    "gif": "/glifs/109.gif",
+    "lng": -74.0155,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "animals"
@@ -1091,9 +1200,10 @@
   },
   {
     "id": 110,
-    "src": "/glifs/110.gif",
-    "lng": -74.01123,
-    "lat": 40.765685,
+    "src": "/glifs-static/110.png",
+    "gif": "/glifs/110.gif",
+    "lng": -74.0105,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "animals"
@@ -1101,9 +1211,10 @@
   },
   {
     "id": 111,
-    "src": "/glifs/111.gif",
-    "lng": -74.005147,
-    "lat": 40.765861,
+    "src": "/glifs-static/111.png",
+    "gif": "/glifs/111.gif",
+    "lng": -74.0055,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "circles"
@@ -1111,9 +1222,10 @@
   },
   {
     "id": 112,
-    "src": "/glifs/112.gif",
-    "lng": -74.004132,
-    "lat": 40.764052,
+    "src": "/glifs-static/112.png",
+    "gif": "/glifs/112.gif",
+    "lng": -74.0005,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1121,9 +1233,10 @@
   },
   {
     "id": 113,
-    "src": "/glifs/113.gif",
-    "lng": -73.999171,
-    "lat": 40.764108,
+    "src": "/glifs-static/113.png",
+    "gif": "/glifs/113.gif",
+    "lng": -73.9955,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1131,9 +1244,10 @@
   },
   {
     "id": 114,
-    "src": "/glifs/114.gif",
-    "lng": -73.993001,
-    "lat": 40.764727,
+    "src": "/glifs-static/114.png",
+    "gif": "/glifs/114.gif",
+    "lng": -73.9905,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1141,9 +1255,10 @@
   },
   {
     "id": 115,
-    "src": "/glifs/115.gif",
-    "lng": -73.988108,
-    "lat": 40.765818,
+    "src": "/glifs-static/115.png",
+    "gif": "/glifs/115.gif",
+    "lng": -73.9855,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "hands"
@@ -1151,9 +1266,10 @@
   },
   {
     "id": 116,
-    "src": "/glifs/116.gif",
-    "lng": -73.983081,
-    "lat": 40.766525,
+    "src": "/glifs-static/116.png",
+    "gif": "/glifs/116.gif",
+    "lng": -73.9805,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "faces"
@@ -1161,9 +1277,10 @@
   },
   {
     "id": 117,
-    "src": "/glifs/117.gif",
-    "lng": -73.976959,
-    "lat": 40.769157,
+    "src": "/glifs-static/117.png",
+    "gif": "/glifs/117.gif",
+    "lng": -73.9755,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1171,9 +1288,10 @@
   },
   {
     "id": 118,
-    "src": "/glifs/118.gif",
-    "lng": -73.973246,
-    "lat": 40.766906,
+    "src": "/glifs-static/118.png",
+    "gif": "/glifs/118.gif",
+    "lng": -73.9705,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1181,9 +1299,10 @@
   },
   {
     "id": 119,
-    "src": "/glifs/119.gif",
-    "lng": -73.964262,
-    "lat": 40.768413,
+    "src": "/glifs-static/119.png",
+    "gif": "/glifs/119.gif",
+    "lng": -73.9655,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "figures"
@@ -1191,9 +1310,10 @@
   },
   {
     "id": 120,
-    "src": "/glifs/120.gif",
-    "lng": -73.96108,
-    "lat": 40.767622,
+    "src": "/glifs-static/120.png",
+    "gif": "/glifs/120.gif",
+    "lng": -73.9605,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "items"
@@ -1201,9 +1321,10 @@
   },
   {
     "id": 121,
-    "src": "/glifs/121.gif",
-    "lng": -73.954843,
-    "lat": 40.768036,
+    "src": "/glifs-static/121.png",
+    "gif": "/glifs/121.gif",
+    "lng": -73.9555,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "faces"
@@ -1211,9 +1332,10 @@
   },
   {
     "id": 122,
-    "src": "/glifs/122.gif",
-    "lng": -73.949315,
-    "lat": 40.768631,
+    "src": "/glifs-static/122.png",
+    "gif": "/glifs/122.gif",
+    "lng": -73.9505,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "faces"
@@ -1221,9 +1343,10 @@
   },
   {
     "id": 123,
-    "src": "/glifs/123.gif",
-    "lng": -73.946483,
-    "lat": 40.764287,
+    "src": "/glifs-static/123.png",
+    "gif": "/glifs/123.gif",
+    "lng": -73.9455,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "symbols"
@@ -1231,9 +1354,10 @@
   },
   {
     "id": 124,
-    "src": "/glifs/124.gif",
-    "lng": -73.941747,
-    "lat": 40.765067,
+    "src": "/glifs-static/124.png",
+    "gif": "/glifs/124.gif",
+    "lng": -73.9405,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "items"
@@ -1241,9 +1365,10 @@
   },
   {
     "id": 125,
-    "src": "/glifs/125.gif",
-    "lng": -73.934922,
-    "lat": 40.76501,
+    "src": "/glifs-static/125.png",
+    "gif": "/glifs/125.gif",
+    "lng": -73.9355,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "circles"
@@ -1251,9 +1376,10 @@
   },
   {
     "id": 126,
-    "src": "/glifs/126.gif",
-    "lng": -73.930985,
-    "lat": 40.766279,
+    "src": "/glifs-static/126.png",
+    "gif": "/glifs/126.gif",
+    "lng": -73.9305,
+    "lat": 40.765,
     "tags": [],
     "categories": [
       "faces"
@@ -1261,9 +1387,10 @@
   },
   {
     "id": 127,
-    "src": "/glifs/127.gif",
-    "lng": -74.018727,
-    "lat": 40.759007,
+    "src": "/glifs-static/127.png",
+    "gif": "/glifs/127.gif",
+    "lng": -74.0155,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "hands"
@@ -1271,9 +1398,10 @@
   },
   {
     "id": 128,
-    "src": "/glifs/128.gif",
-    "lng": -74.011914,
-    "lat": 40.757998,
+    "src": "/glifs-static/128.png",
+    "gif": "/glifs/128.gif",
+    "lng": -74.0105,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "items"
@@ -1281,9 +1409,10 @@
   },
   {
     "id": 129,
-    "src": "/glifs/129.gif",
-    "lng": -74.008576,
-    "lat": 40.759312,
+    "src": "/glifs-static/129.png",
+    "gif": "/glifs/129.gif",
+    "lng": -74.0055,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "items"
@@ -1291,9 +1420,10 @@
   },
   {
     "id": 130,
-    "src": "/glifs/130.gif",
-    "lng": -74.003168,
-    "lat": 40.757954,
+    "src": "/glifs-static/130.png",
+    "gif": "/glifs/130.gif",
+    "lng": -74.0005,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "items"
@@ -1301,9 +1431,10 @@
   },
   {
     "id": 131,
-    "src": "/glifs/131.gif",
-    "lng": -73.997214,
-    "lat": 40.761822,
+    "src": "/glifs-static/131.png",
+    "gif": "/glifs/131.gif",
+    "lng": -73.9955,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "animals"
@@ -1311,9 +1442,10 @@
   },
   {
     "id": 132,
-    "src": "/glifs/132.gif",
-    "lng": -73.992313,
-    "lat": 40.761304,
+    "src": "/glifs-static/132.png",
+    "gif": "/glifs/132.gif",
+    "lng": -73.9905,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "hands"
@@ -1321,9 +1453,10 @@
   },
   {
     "id": 133,
-    "src": "/glifs/133.gif",
-    "lng": -73.989204,
-    "lat": 40.762309,
+    "src": "/glifs-static/133.png",
+    "gif": "/glifs/133.gif",
+    "lng": -73.9855,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "figures"
@@ -1331,9 +1464,10 @@
   },
   {
     "id": 134,
-    "src": "/glifs/134.gif",
-    "lng": -73.980329,
-    "lat": 40.762473,
+    "src": "/glifs-static/134.png",
+    "gif": "/glifs/134.gif",
+    "lng": -73.9805,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "items"
@@ -1341,9 +1475,10 @@
   },
   {
     "id": 135,
-    "src": "/glifs/135.gif",
-    "lng": -73.974711,
-    "lat": 40.761689,
+    "src": "/glifs-static/135.png",
+    "gif": "/glifs/135.gif",
+    "lng": -73.9755,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "faces"
@@ -1351,9 +1486,10 @@
   },
   {
     "id": 136,
-    "src": "/glifs/136.gif",
-    "lng": -73.97139,
-    "lat": 40.762796,
+    "src": "/glifs-static/136.png",
+    "gif": "/glifs/136.gif",
+    "lng": -73.9705,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "symbols"
@@ -1361,9 +1497,10 @@
   },
   {
     "id": 137,
-    "src": "/glifs/137.gif",
-    "lng": -73.96473,
-    "lat": 40.762272,
+    "src": "/glifs-static/137.png",
+    "gif": "/glifs/137.gif",
+    "lng": -73.9655,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "faces"
@@ -1371,9 +1508,10 @@
   },
   {
     "id": 138,
-    "src": "/glifs/138.gif",
-    "lng": -73.959688,
-    "lat": 40.758618,
+    "src": "/glifs-static/138.png",
+    "gif": "/glifs/138.gif",
+    "lng": -73.9605,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "circles"
@@ -1381,9 +1519,10 @@
   },
   {
     "id": 139,
-    "src": "/glifs/139.gif",
-    "lng": -73.95626,
-    "lat": 40.759304,
+    "src": "/glifs-static/139.png",
+    "gif": "/glifs/139.gif",
+    "lng": -73.9555,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "faces"
@@ -1391,9 +1530,10 @@
   },
   {
     "id": 140,
-    "src": "/glifs/140.gif",
-    "lng": -73.950649,
-    "lat": 40.758495,
+    "src": "/glifs-static/140.png",
+    "gif": "/glifs/140.gif",
+    "lng": -73.9505,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "symbols"
@@ -1401,9 +1541,10 @@
   },
   {
     "id": 141,
-    "src": "/glifs/141.gif",
-    "lng": -73.947314,
-    "lat": 40.758389,
+    "src": "/glifs-static/141.png",
+    "gif": "/glifs/141.gif",
+    "lng": -73.9455,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "circles"
@@ -1411,9 +1552,10 @@
   },
   {
     "id": 142,
-    "src": "/glifs/142.gif",
-    "lng": -73.942326,
-    "lat": 40.759026,
+    "src": "/glifs-static/142.png",
+    "gif": "/glifs/142.gif",
+    "lng": -73.9405,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "nature"
@@ -1421,9 +1563,10 @@
   },
   {
     "id": 143,
-    "src": "/glifs/143.gif",
-    "lng": -73.937085,
-    "lat": 40.760163,
+    "src": "/glifs-static/143.png",
+    "gif": "/glifs/143.gif",
+    "lng": -73.9355,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "animals"
@@ -1431,9 +1574,10 @@
   },
   {
     "id": 144,
-    "src": "/glifs/144.gif",
-    "lng": -73.934043,
-    "lat": 40.759438,
+    "src": "/glifs-static/144.png",
+    "gif": "/glifs/144.gif",
+    "lng": -73.9305,
+    "lat": 40.759,
     "tags": [],
     "categories": [
       "symbols"
@@ -1441,9 +1585,10 @@
   },
   {
     "id": 145,
-    "src": "/glifs/145.gif",
-    "lng": -74.017444,
-    "lat": 40.756465,
+    "src": "/glifs-static/145.png",
+    "gif": "/glifs/145.gif",
+    "lng": -74.0155,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "figures"
@@ -1451,9 +1596,10 @@
   },
   {
     "id": 146,
-    "src": "/glifs/146.gif",
-    "lng": -74.012166,
-    "lat": 40.755265,
+    "src": "/glifs-static/146.png",
+    "gif": "/glifs/146.gif",
+    "lng": -74.0105,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "faces"
@@ -1461,9 +1607,10 @@
   },
   {
     "id": 147,
-    "src": "/glifs/147.gif",
-    "lng": -74.006927,
-    "lat": 40.754674,
+    "src": "/glifs-static/147.png",
+    "gif": "/glifs/147.gif",
+    "lng": -74.0055,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1471,9 +1618,10 @@
   },
   {
     "id": 148,
-    "src": "/glifs/148.gif",
-    "lng": -74.002747,
-    "lat": 40.755869,
+    "src": "/glifs-static/148.png",
+    "gif": "/glifs/148.gif",
+    "lng": -74.0005,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1481,9 +1629,10 @@
   },
   {
     "id": 149,
-    "src": "/glifs/149.gif",
-    "lng": -73.995547,
-    "lat": 40.755749,
+    "src": "/glifs-static/149.png",
+    "gif": "/glifs/149.gif",
+    "lng": -73.9955,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1491,9 +1640,10 @@
   },
   {
     "id": 150,
-    "src": "/glifs/150.gif",
-    "lng": -73.989486,
-    "lat": 40.755207,
+    "src": "/glifs-static/150.png",
+    "gif": "/glifs/150.gif",
+    "lng": -73.9905,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1501,9 +1651,10 @@
   },
   {
     "id": 151,
-    "src": "/glifs/151.gif",
-    "lng": -73.986709,
-    "lat": 40.756539,
+    "src": "/glifs-static/151.png",
+    "gif": "/glifs/151.gif",
+    "lng": -73.9855,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1511,9 +1662,10 @@
   },
   {
     "id": 152,
-    "src": "/glifs/152.gif",
-    "lng": -73.981546,
-    "lat": 40.755545,
+    "src": "/glifs-static/152.png",
+    "gif": "/glifs/152.gif",
+    "lng": -73.9805,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "figures"
@@ -1521,9 +1673,10 @@
   },
   {
     "id": 153,
-    "src": "/glifs/153.gif",
-    "lng": -73.974975,
-    "lat": 40.754371,
+    "src": "/glifs-static/153.png",
+    "gif": "/glifs/153.gif",
+    "lng": -73.9755,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1531,9 +1684,10 @@
   },
   {
     "id": 154,
-    "src": "/glifs/154.gif",
-    "lng": -73.970445,
-    "lat": 40.751539,
+    "src": "/glifs-static/154.png",
+    "gif": "/glifs/154.gif",
+    "lng": -73.9705,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "animals"
@@ -1541,9 +1695,10 @@
   },
   {
     "id": 155,
-    "src": "/glifs/155.gif",
-    "lng": -73.964519,
-    "lat": 40.751609,
+    "src": "/glifs-static/155.png",
+    "gif": "/glifs/155.gif",
+    "lng": -73.9655,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "circles"
@@ -1551,9 +1706,10 @@
   },
   {
     "id": 156,
-    "src": "/glifs/156.gif",
-    "lng": -73.961877,
-    "lat": 40.751916,
+    "src": "/glifs-static/156.png",
+    "gif": "/glifs/156.gif",
+    "lng": -73.9605,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "nature"
@@ -1561,9 +1717,10 @@
   },
   {
     "id": 157,
-    "src": "/glifs/157.gif",
-    "lng": -73.957944,
-    "lat": 40.753433,
+    "src": "/glifs-static/157.png",
+    "gif": "/glifs/157.gif",
+    "lng": -73.9555,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1571,9 +1728,10 @@
   },
   {
     "id": 158,
-    "src": "/glifs/158.gif",
-    "lng": -73.95362,
-    "lat": 40.753937,
+    "src": "/glifs-static/158.png",
+    "gif": "/glifs/158.gif",
+    "lng": -73.9505,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1581,9 +1739,10 @@
   },
   {
     "id": 159,
-    "src": "/glifs/159.gif",
-    "lng": -73.948421,
-    "lat": 40.753514,
+    "src": "/glifs-static/159.png",
+    "gif": "/glifs/159.gif",
+    "lng": -73.9455,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "letters"
@@ -1591,9 +1750,10 @@
   },
   {
     "id": 160,
-    "src": "/glifs/160.gif",
-    "lng": -73.941979,
-    "lat": 40.755655,
+    "src": "/glifs-static/160.png",
+    "gif": "/glifs/160.gif",
+    "lng": -73.9405,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1601,9 +1761,10 @@
   },
   {
     "id": 161,
-    "src": "/glifs/161.gif",
-    "lng": -73.937876,
-    "lat": 40.757412,
+    "src": "/glifs-static/161.png",
+    "gif": "/glifs/161.gif",
+    "lng": -73.9355,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "symbols"
@@ -1611,9 +1772,10 @@
   },
   {
     "id": 162,
-    "src": "/glifs/162.gif",
-    "lng": -73.934057,
-    "lat": 40.755696,
+    "src": "/glifs-static/162.png",
+    "gif": "/glifs/162.gif",
+    "lng": -73.9305,
+    "lat": 40.753,
     "tags": [],
     "categories": [
       "faces"
@@ -1621,9 +1783,10 @@
   },
   {
     "id": 163,
-    "src": "/glifs/163.gif",
-    "lng": -74.017961,
-    "lat": 40.74858,
+    "src": "/glifs-static/163.png",
+    "gif": "/glifs/163.gif",
+    "lng": -74.0155,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "items"
@@ -1631,9 +1794,10 @@
   },
   {
     "id": 164,
-    "src": "/glifs/164.gif",
-    "lng": -74.011306,
-    "lat": 40.748741,
+    "src": "/glifs-static/164.png",
+    "gif": "/glifs/164.gif",
+    "lng": -74.0105,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "faces"
@@ -1641,9 +1805,10 @@
   },
   {
     "id": 165,
-    "src": "/glifs/165.gif",
-    "lng": -74.005617,
-    "lat": 40.750034,
+    "src": "/glifs-static/165.png",
+    "gif": "/glifs/165.gif",
+    "lng": -74.0055,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "faces"
@@ -1651,9 +1816,10 @@
   },
   {
     "id": 166,
-    "src": "/glifs/166.gif",
-    "lng": -73.999936,
-    "lat": 40.751445,
+    "src": "/glifs-static/166.png",
+    "gif": "/glifs/166.gif",
+    "lng": -74.0005,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "animals"
@@ -1661,9 +1827,10 @@
   },
   {
     "id": 167,
-    "src": "/glifs/167.gif",
-    "lng": -73.994884,
-    "lat": 40.750739,
+    "src": "/glifs-static/167.png",
+    "gif": "/glifs/167.gif",
+    "lng": -73.9955,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "symbols"
@@ -1671,9 +1838,10 @@
   },
   {
     "id": 168,
-    "src": "/glifs/168.gif",
-    "lng": -73.99049,
-    "lat": 40.74665,
+    "src": "/glifs-static/168.png",
+    "gif": "/glifs/168.gif",
+    "lng": -73.9905,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "animals"
@@ -1681,9 +1849,10 @@
   },
   {
     "id": 169,
-    "src": "/glifs/169.gif",
-    "lng": -73.985067,
-    "lat": 40.746604,
+    "src": "/glifs-static/169.png",
+    "gif": "/glifs/169.gif",
+    "lng": -73.9855,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "figures"
@@ -1691,9 +1860,10 @@
   },
   {
     "id": 170,
-    "src": "/glifs/170.gif",
-    "lng": -73.981696,
-    "lat": 40.747295,
+    "src": "/glifs-static/170.png",
+    "gif": "/glifs/170.gif",
+    "lng": -73.9805,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "nature"
@@ -1701,9 +1871,10 @@
   },
   {
     "id": 171,
-    "src": "/glifs/171.gif",
-    "lng": -73.977446,
-    "lat": 40.747742,
+    "src": "/glifs-static/171.png",
+    "gif": "/glifs/171.gif",
+    "lng": -73.9755,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "items"
@@ -1711,9 +1882,10 @@
   },
   {
     "id": 172,
-    "src": "/glifs/172.gif",
-    "lng": -73.972095,
-    "lat": 40.746893,
+    "src": "/glifs-static/172.png",
+    "gif": "/glifs/172.gif",
+    "lng": -73.9705,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "symbols"
@@ -1721,9 +1893,10 @@
   },
   {
     "id": 173,
-    "src": "/glifs/173.gif",
-    "lng": -73.96725,
-    "lat": 40.747656,
+    "src": "/glifs-static/173.png",
+    "gif": "/glifs/173.gif",
+    "lng": -73.9655,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "symbols"
@@ -1731,9 +1904,10 @@
   },
   {
     "id": 174,
-    "src": "/glifs/174.gif",
-    "lng": -73.963006,
-    "lat": 40.746961,
+    "src": "/glifs-static/174.png",
+    "gif": "/glifs/174.gif",
+    "lng": -73.9605,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "animals"
@@ -1741,9 +1915,10 @@
   },
   {
     "id": 175,
-    "src": "/glifs/175.gif",
-    "lng": -73.957667,
-    "lat": 40.75002,
+    "src": "/glifs-static/175.png",
+    "gif": "/glifs/175.gif",
+    "lng": -73.9555,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "faces"
@@ -1751,9 +1926,10 @@
   },
   {
     "id": 176,
-    "src": "/glifs/176.gif",
-    "lng": -73.953797,
-    "lat": 40.750166,
+    "src": "/glifs-static/176.png",
+    "gif": "/glifs/176.gif",
+    "lng": -73.9505,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "nature"
@@ -1761,9 +1937,10 @@
   },
   {
     "id": 177,
-    "src": "/glifs/177.gif",
-    "lng": -73.948278,
-    "lat": 40.749057,
+    "src": "/glifs-static/177.png",
+    "gif": "/glifs/177.gif",
+    "lng": -73.9455,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "symbols"
@@ -1771,9 +1948,10 @@
   },
   {
     "id": 178,
-    "src": "/glifs/178.gif",
-    "lng": -73.941816,
-    "lat": 40.750203,
+    "src": "/glifs-static/178.png",
+    "gif": "/glifs/178.gif",
+    "lng": -73.9405,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "animals"
@@ -1781,9 +1959,10 @@
   },
   {
     "id": 179,
-    "src": "/glifs/179.gif",
-    "lng": -73.935889,
-    "lat": 40.750744,
+    "src": "/glifs-static/179.png",
+    "gif": "/glifs/179.gif",
+    "lng": -73.9355,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "figures"
@@ -1791,9 +1970,10 @@
   },
   {
     "id": 180,
-    "src": "/glifs/180.gif",
-    "lng": -73.929317,
-    "lat": 40.750358,
+    "src": "/glifs-static/180.png",
+    "gif": "/glifs/180.gif",
+    "lng": -73.9305,
+    "lat": 40.747,
     "tags": [],
     "categories": [
       "symbols"
@@ -1801,9 +1981,10 @@
   },
   {
     "id": 181,
-    "src": "/glifs/181.gif",
-    "lng": -74.015587,
-    "lat": 40.745143,
+    "src": "/glifs-static/181.png",
+    "gif": "/glifs/181.gif",
+    "lng": -74.0155,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "letters"
@@ -1811,9 +1992,10 @@
   },
   {
     "id": 182,
-    "src": "/glifs/182.gif",
-    "lng": -74.009998,
-    "lat": 40.741453,
+    "src": "/glifs-static/182.png",
+    "gif": "/glifs/182.gif",
+    "lng": -74.0105,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "hands"
@@ -1821,9 +2003,10 @@
   },
   {
     "id": 183,
-    "src": "/glifs/183.gif",
-    "lng": -74.00468,
-    "lat": 40.741678,
+    "src": "/glifs-static/183.png",
+    "gif": "/glifs/183.gif",
+    "lng": -74.0055,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "animals"
@@ -1831,9 +2014,10 @@
   },
   {
     "id": 184,
-    "src": "/glifs/184.gif",
-    "lng": -74.001747,
-    "lat": 40.741422,
+    "src": "/glifs-static/184.png",
+    "gif": "/glifs/184.gif",
+    "lng": -74.0005,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "faces"
@@ -1841,9 +2025,10 @@
   },
   {
     "id": 185,
-    "src": "/glifs/185.gif",
-    "lng": -73.996545,
-    "lat": 40.739885,
+    "src": "/glifs-static/185.png",
+    "gif": "/glifs/185.gif",
+    "lng": -73.9955,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "faces"
@@ -1851,9 +2036,10 @@
   },
   {
     "id": 186,
-    "src": "/glifs/186.gif",
-    "lng": -73.991985,
-    "lat": 40.740904,
+    "src": "/glifs-static/186.png",
+    "gif": "/glifs/186.gif",
+    "lng": -73.9905,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "animals"
@@ -1861,9 +2047,10 @@
   },
   {
     "id": 187,
-    "src": "/glifs/187.gif",
-    "lng": -73.987445,
-    "lat": 40.741491,
+    "src": "/glifs-static/187.png",
+    "gif": "/glifs/187.gif",
+    "lng": -73.9855,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "faces"
@@ -1871,9 +2058,10 @@
   },
   {
     "id": 188,
-    "src": "/glifs/188.gif",
-    "lng": -73.983109,
-    "lat": 40.741797,
+    "src": "/glifs-static/188.png",
+    "gif": "/glifs/188.gif",
+    "lng": -73.9805,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "circles"
@@ -1881,9 +2069,10 @@
   },
   {
     "id": 189,
-    "src": "/glifs/189.gif",
-    "lng": -73.978906,
-    "lat": 40.741392,
+    "src": "/glifs-static/189.png",
+    "gif": "/glifs/189.gif",
+    "lng": -73.9755,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "circles"
@@ -1891,9 +2080,10 @@
   },
   {
     "id": 190,
-    "src": "/glifs/190.gif",
-    "lng": -73.972723,
-    "lat": 40.74344,
+    "src": "/glifs-static/190.png",
+    "gif": "/glifs/190.gif",
+    "lng": -73.9705,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "items"
@@ -1901,9 +2091,10 @@
   },
   {
     "id": 191,
-    "src": "/glifs/191.gif",
-    "lng": -73.9688,
-    "lat": 40.743942,
+    "src": "/glifs-static/191.png",
+    "gif": "/glifs/191.gif",
+    "lng": -73.9655,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "figures"
@@ -1911,9 +2102,10 @@
   },
   {
     "id": 192,
-    "src": "/glifs/192.gif",
-    "lng": -73.962841,
-    "lat": 40.742809,
+    "src": "/glifs-static/192.png",
+    "gif": "/glifs/192.gif",
+    "lng": -73.9605,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "symbols"
@@ -1921,9 +2113,10 @@
   },
   {
     "id": 193,
-    "src": "/glifs/193.gif",
-    "lng": -73.956514,
-    "lat": 40.743312,
+    "src": "/glifs-static/193.png",
+    "gif": "/glifs/193.gif",
+    "lng": -73.9555,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "symbols"
@@ -1931,9 +2124,10 @@
   },
   {
     "id": 194,
-    "src": "/glifs/194.gif",
-    "lng": -73.949315,
-    "lat": 40.743806,
+    "src": "/glifs-static/194.png",
+    "gif": "/glifs/194.gif",
+    "lng": -73.9505,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "symbols"
@@ -1941,9 +2135,10 @@
   },
   {
     "id": 195,
-    "src": "/glifs/195.gif",
-    "lng": -73.945181,
-    "lat": 40.744572,
+    "src": "/glifs-static/195.png",
+    "gif": "/glifs/195.gif",
+    "lng": -73.9455,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "circles"
@@ -1951,9 +2146,10 @@
   },
   {
     "id": 196,
-    "src": "/glifs/196.gif",
-    "lng": -73.940987,
-    "lat": 40.742537,
+    "src": "/glifs-static/196.png",
+    "gif": "/glifs/196.gif",
+    "lng": -73.9405,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "circles"
@@ -1961,9 +2157,10 @@
   },
   {
     "id": 197,
-    "src": "/glifs/197.gif",
-    "lng": -73.934767,
-    "lat": 40.742406,
+    "src": "/glifs-static/197.png",
+    "gif": "/glifs/197.gif",
+    "lng": -73.9355,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "circles"
@@ -1971,9 +2168,10 @@
   },
   {
     "id": 198,
-    "src": "/glifs/198.gif",
-    "lng": -73.931353,
-    "lat": 40.741621,
+    "src": "/glifs-static/198.png",
+    "gif": "/glifs/198.gif",
+    "lng": -73.9305,
+    "lat": 40.741,
     "tags": [],
     "categories": [
       "symbols"
@@ -1981,9 +2179,10 @@
   },
   {
     "id": 199,
-    "src": "/glifs/199.gif",
-    "lng": -74.015581,
-    "lat": 40.73386,
+    "src": "/glifs-static/199.png",
+    "gif": "/glifs/199.gif",
+    "lng": -74.0155,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "circles"
@@ -1991,9 +2190,10 @@
   },
   {
     "id": 200,
-    "src": "/glifs/200.gif",
-    "lng": -74.010293,
-    "lat": 40.73603,
+    "src": "/glifs-static/200.png",
+    "gif": "/glifs/200.gif",
+    "lng": -74.0105,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2001,9 +2201,10 @@
   },
   {
     "id": 201,
-    "src": "/glifs/201.gif",
-    "lng": -74.008816,
-    "lat": 40.735598,
+    "src": "/glifs-static/201.png",
+    "gif": "/glifs/201.gif",
+    "lng": -74.0055,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2011,9 +2212,10 @@
   },
   {
     "id": 202,
-    "src": "/glifs/202.gif",
-    "lng": -74.002945,
-    "lat": 40.733823,
+    "src": "/glifs-static/202.png",
+    "gif": "/glifs/202.gif",
+    "lng": -74.0005,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2021,9 +2223,10 @@
   },
   {
     "id": 203,
-    "src": "/glifs/203.gif",
-    "lng": -73.998322,
-    "lat": 40.73513,
+    "src": "/glifs-static/203.png",
+    "gif": "/glifs/203.gif",
+    "lng": -73.9955,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "items"
@@ -2031,9 +2234,10 @@
   },
   {
     "id": 204,
-    "src": "/glifs/204.gif",
-    "lng": -73.992079,
-    "lat": 40.734798,
+    "src": "/glifs-static/204.png",
+    "gif": "/glifs/204.gif",
+    "lng": -73.9905,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2041,9 +2245,10 @@
   },
   {
     "id": 205,
-    "src": "/glifs/205.gif",
-    "lng": -73.98765,
-    "lat": 40.737376,
+    "src": "/glifs-static/205.png",
+    "gif": "/glifs/205.gif",
+    "lng": -73.9855,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "animals"
@@ -2051,9 +2256,10 @@
   },
   {
     "id": 206,
-    "src": "/glifs/206.gif",
-    "lng": -73.983576,
-    "lat": 40.738824,
+    "src": "/glifs-static/206.png",
+    "gif": "/glifs/206.gif",
+    "lng": -73.9805,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "animals"
@@ -2061,9 +2267,10 @@
   },
   {
     "id": 207,
-    "src": "/glifs/207.gif",
-    "lng": -73.977033,
-    "lat": 40.73848,
+    "src": "/glifs-static/207.png",
+    "gif": "/glifs/207.gif",
+    "lng": -73.9755,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "animals"
@@ -2071,9 +2278,10 @@
   },
   {
     "id": 208,
-    "src": "/glifs/208.gif",
-    "lng": -73.969321,
-    "lat": 40.737311,
+    "src": "/glifs-static/208.png",
+    "gif": "/glifs/208.gif",
+    "lng": -73.9705,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2081,9 +2289,10 @@
   },
   {
     "id": 209,
-    "src": "/glifs/209.gif",
-    "lng": -73.96569,
-    "lat": 40.736671,
+    "src": "/glifs-static/209.png",
+    "gif": "/glifs/209.gif",
+    "lng": -73.9655,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2091,9 +2300,10 @@
   },
   {
     "id": 210,
-    "src": "/glifs/210.gif",
-    "lng": -73.961071,
-    "lat": 40.738156,
+    "src": "/glifs-static/210.png",
+    "gif": "/glifs/210.gif",
+    "lng": -73.9605,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "faces"
@@ -2101,9 +2311,10 @@
   },
   {
     "id": 211,
-    "src": "/glifs/211.gif",
-    "lng": -73.956218,
-    "lat": 40.737632,
+    "src": "/glifs-static/211.png",
+    "gif": "/glifs/211.gif",
+    "lng": -73.9555,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "faces"
@@ -2111,9 +2322,10 @@
   },
   {
     "id": 212,
-    "src": "/glifs/212.gif",
-    "lng": -73.94971,
-    "lat": 40.735242,
+    "src": "/glifs-static/212.png",
+    "gif": "/glifs/212.gif",
+    "lng": -73.9505,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "symbols"
@@ -2121,9 +2333,10 @@
   },
   {
     "id": 213,
-    "src": "/glifs/213.gif",
-    "lng": -73.944757,
-    "lat": 40.735404,
+    "src": "/glifs-static/213.png",
+    "gif": "/glifs/213.gif",
+    "lng": -73.9455,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "faces"
@@ -2131,9 +2344,10 @@
   },
   {
     "id": 214,
-    "src": "/glifs/214.gif",
-    "lng": -73.940272,
-    "lat": 40.734605,
+    "src": "/glifs-static/214.png",
+    "gif": "/glifs/214.gif",
+    "lng": -73.9405,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "circles"
@@ -2141,9 +2355,10 @@
   },
   {
     "id": 215,
-    "src": "/glifs/215.gif",
-    "lng": -73.936182,
-    "lat": 40.733639,
+    "src": "/glifs-static/215.png",
+    "gif": "/glifs/215.gif",
+    "lng": -73.9355,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "circles"
@@ -2151,9 +2366,10 @@
   },
   {
     "id": 216,
-    "src": "/glifs/216.gif",
-    "lng": -73.93177,
-    "lat": 40.736207,
+    "src": "/glifs-static/216.png",
+    "gif": "/glifs/216.gif",
+    "lng": -73.9305,
+    "lat": 40.735,
     "tags": [],
     "categories": [
       "circles"
@@ -2161,9 +2377,10 @@
   },
   {
     "id": 217,
-    "src": "/glifs/217.gif",
-    "lng": -74.018964,
-    "lat": 40.730088,
+    "src": "/glifs-static/217.png",
+    "gif": "/glifs/217.gif",
+    "lng": -74.0155,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2171,9 +2388,10 @@
   },
   {
     "id": 218,
-    "src": "/glifs/218.gif",
-    "lng": -74.012088,
-    "lat": 40.727877,
+    "src": "/glifs-static/218.png",
+    "gif": "/glifs/218.gif",
+    "lng": -74.0105,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2181,9 +2399,10 @@
   },
   {
     "id": 219,
-    "src": "/glifs/219.gif",
-    "lng": -74.008344,
-    "lat": 40.727746,
+    "src": "/glifs-static/219.png",
+    "gif": "/glifs/219.gif",
+    "lng": -74.0055,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2191,9 +2410,10 @@
   },
   {
     "id": 220,
-    "src": "/glifs/220.gif",
-    "lng": -74.002685,
-    "lat": 40.731051,
+    "src": "/glifs-static/220.png",
+    "gif": "/glifs/220.gif",
+    "lng": -74.0005,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "faces"
@@ -2201,9 +2421,10 @@
   },
   {
     "id": 221,
-    "src": "/glifs/221.gif",
-    "lng": -73.99803,
-    "lat": 40.730724,
+    "src": "/glifs-static/221.png",
+    "gif": "/glifs/221.gif",
+    "lng": -73.9955,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "faces"
@@ -2211,9 +2432,10 @@
   },
   {
     "id": 222,
-    "src": "/glifs/222.gif",
-    "lng": -73.993526,
-    "lat": 40.731157,
+    "src": "/glifs-static/222.png",
+    "gif": "/glifs/222.gif",
+    "lng": -73.9905,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "figures"
@@ -2221,9 +2443,10 @@
   },
   {
     "id": 223,
-    "src": "/glifs/223.gif",
-    "lng": -73.984906,
-    "lat": 40.732452,
+    "src": "/glifs-static/223.png",
+    "gif": "/glifs/223.gif",
+    "lng": -73.9855,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2231,9 +2454,10 @@
   },
   {
     "id": 224,
-    "src": "/glifs/224.gif",
-    "lng": -73.980556,
-    "lat": 40.731711,
+    "src": "/glifs-static/224.png",
+    "gif": "/glifs/224.gif",
+    "lng": -73.9805,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "circles"
@@ -2241,9 +2465,10 @@
   },
   {
     "id": 225,
-    "src": "/glifs/225.gif",
-    "lng": -73.975508,
-    "lat": 40.732531,
+    "src": "/glifs-static/225.png",
+    "gif": "/glifs/225.gif",
+    "lng": -73.9755,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "faces"
@@ -2251,9 +2476,10 @@
   },
   {
     "id": 226,
-    "src": "/glifs/226.gif",
-    "lng": -73.971566,
-    "lat": 40.731353,
+    "src": "/glifs-static/226.png",
+    "gif": "/glifs/226.gif",
+    "lng": -73.9705,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "letters"
@@ -2261,9 +2487,10 @@
   },
   {
     "id": 227,
-    "src": "/glifs/227.gif",
-    "lng": -73.965506,
-    "lat": 40.728333,
+    "src": "/glifs-static/227.png",
+    "gif": "/glifs/227.gif",
+    "lng": -73.9655,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "circles"
@@ -2271,9 +2498,10 @@
   },
   {
     "id": 228,
-    "src": "/glifs/228.gif",
-    "lng": -73.959665,
-    "lat": 40.728541,
+    "src": "/glifs-static/228.png",
+    "gif": "/glifs/228.gif",
+    "lng": -73.9605,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2281,9 +2509,10 @@
   },
   {
     "id": 229,
-    "src": "/glifs/229.gif",
-    "lng": -73.95576,
-    "lat": 40.72804,
+    "src": "/glifs-static/229.png",
+    "gif": "/glifs/229.gif",
+    "lng": -73.9555,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "circles"
@@ -2291,9 +2520,10 @@
   },
   {
     "id": 230,
-    "src": "/glifs/230.gif",
-    "lng": -73.949628,
-    "lat": 40.727835,
+    "src": "/glifs-static/230.png",
+    "gif": "/glifs/230.gif",
+    "lng": -73.9505,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "nature"
@@ -2301,9 +2531,10 @@
   },
   {
     "id": 231,
-    "src": "/glifs/231.gif",
-    "lng": -73.947852,
-    "lat": 40.729335,
+    "src": "/glifs-static/231.png",
+    "gif": "/glifs/231.gif",
+    "lng": -73.9455,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "animals"
@@ -2311,9 +2542,10 @@
   },
   {
     "id": 232,
-    "src": "/glifs/232.gif",
-    "lng": -73.94242,
-    "lat": 40.728206,
+    "src": "/glifs-static/232.png",
+    "gif": "/glifs/232.gif",
+    "lng": -73.9405,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2321,9 +2553,10 @@
   },
   {
     "id": 233,
-    "src": "/glifs/233.gif",
-    "lng": -73.938257,
-    "lat": 40.727883,
+    "src": "/glifs-static/233.png",
+    "gif": "/glifs/233.gif",
+    "lng": -73.9355,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "figures"
@@ -2331,9 +2564,10 @@
   },
   {
     "id": 234,
-    "src": "/glifs/234.gif",
-    "lng": -73.933394,
-    "lat": 40.732564,
+    "src": "/glifs-static/234.png",
+    "gif": "/glifs/234.gif",
+    "lng": -73.9305,
+    "lat": 40.729,
     "tags": [],
     "categories": [
       "symbols"
@@ -2341,9 +2575,10 @@
   },
   {
     "id": 235,
-    "src": "/glifs/235.gif",
-    "lng": -74.017741,
-    "lat": 40.724642,
+    "src": "/glifs-static/235.png",
+    "gif": "/glifs/235.gif",
+    "lng": -74.0155,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "figures"
@@ -2351,9 +2586,10 @@
   },
   {
     "id": 236,
-    "src": "/glifs/236.gif",
-    "lng": -74.013663,
-    "lat": 40.726521,
+    "src": "/glifs-static/236.png",
+    "gif": "/glifs/236.gif",
+    "lng": -74.0105,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "animals"
@@ -2361,9 +2597,10 @@
   },
   {
     "id": 237,
-    "src": "/glifs/237.gif",
-    "lng": -74.008226,
-    "lat": 40.724567,
+    "src": "/glifs-static/237.png",
+    "gif": "/glifs/237.gif",
+    "lng": -74.0055,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "items"
@@ -2371,9 +2608,10 @@
   },
   {
     "id": 238,
-    "src": "/glifs/238.gif",
-    "lng": -74.000181,
-    "lat": 40.725831,
+    "src": "/glifs-static/238.png",
+    "gif": "/glifs/238.gif",
+    "lng": -74.0005,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2381,9 +2619,10 @@
   },
   {
     "id": 239,
-    "src": "/glifs/239.gif",
-    "lng": -73.995754,
-    "lat": 40.724842,
+    "src": "/glifs-static/239.png",
+    "gif": "/glifs/239.gif",
+    "lng": -73.9955,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2391,9 +2630,10 @@
   },
   {
     "id": 240,
-    "src": "/glifs/240.gif",
-    "lng": -73.990079,
-    "lat": 40.724919,
+    "src": "/glifs-static/240.png",
+    "gif": "/glifs/240.gif",
+    "lng": -73.9905,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2401,9 +2641,10 @@
   },
   {
     "id": 241,
-    "src": "/glifs/241.gif",
-    "lng": -73.984991,
-    "lat": 40.725356,
+    "src": "/glifs-static/241.png",
+    "gif": "/glifs/241.gif",
+    "lng": -73.9855,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "figures"
@@ -2411,9 +2652,10 @@
   },
   {
     "id": 242,
-    "src": "/glifs/242.gif",
-    "lng": -73.980522,
-    "lat": 40.723592,
+    "src": "/glifs-static/242.png",
+    "gif": "/glifs/242.gif",
+    "lng": -73.9805,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2421,9 +2663,10 @@
   },
   {
     "id": 243,
-    "src": "/glifs/243.gif",
-    "lng": -73.976469,
-    "lat": 40.721973,
+    "src": "/glifs-static/243.png",
+    "gif": "/glifs/243.gif",
+    "lng": -73.9755,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "faces"
@@ -2431,9 +2674,10 @@
   },
   {
     "id": 244,
-    "src": "/glifs/244.gif",
-    "lng": -73.970865,
-    "lat": 40.723139,
+    "src": "/glifs-static/244.png",
+    "gif": "/glifs/244.gif",
+    "lng": -73.9705,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "circles"
@@ -2441,9 +2685,10 @@
   },
   {
     "id": 245,
-    "src": "/glifs/245.gif",
-    "lng": -73.968388,
-    "lat": 40.72292,
+    "src": "/glifs-static/245.png",
+    "gif": "/glifs/245.gif",
+    "lng": -73.9655,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "figures"
@@ -2451,9 +2696,10 @@
   },
   {
     "id": 246,
-    "src": "/glifs/246.gif",
-    "lng": -73.962387,
-    "lat": 40.722852,
+    "src": "/glifs-static/246.png",
+    "gif": "/glifs/246.gif",
+    "lng": -73.9605,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2461,9 +2707,10 @@
   },
   {
     "id": 247,
-    "src": "/glifs/247.gif",
-    "lng": -73.956895,
-    "lat": 40.723937,
+    "src": "/glifs-static/247.png",
+    "gif": "/glifs/247.gif",
+    "lng": -73.9555,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "figures"
@@ -2471,9 +2718,10 @@
   },
   {
     "id": 248,
-    "src": "/glifs/248.gif",
-    "lng": -73.952891,
-    "lat": 40.723783,
+    "src": "/glifs-static/248.png",
+    "gif": "/glifs/248.gif",
+    "lng": -73.9505,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2481,9 +2729,10 @@
   },
   {
     "id": 249,
-    "src": "/glifs/249.gif",
-    "lng": -73.94779,
-    "lat": 40.725541,
+    "src": "/glifs-static/249.png",
+    "gif": "/glifs/249.gif",
+    "lng": -73.9455,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "symbols"
@@ -2491,9 +2740,10 @@
   },
   {
     "id": 250,
-    "src": "/glifs/250.gif",
-    "lng": -73.942339,
-    "lat": 40.725458,
+    "src": "/glifs-static/250.png",
+    "gif": "/glifs/250.gif",
+    "lng": -73.9405,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "animals"
@@ -2501,9 +2751,10 @@
   },
   {
     "id": 251,
-    "src": "/glifs/251.gif",
-    "lng": -73.938449,
-    "lat": 40.7262,
+    "src": "/glifs-static/251.png",
+    "gif": "/glifs/251.gif",
+    "lng": -73.9355,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "letters"
@@ -2511,9 +2762,10 @@
   },
   {
     "id": 252,
-    "src": "/glifs/252.gif",
-    "lng": -73.932621,
-    "lat": 40.725144,
+    "src": "/glifs-static/252.png",
+    "gif": "/glifs/252.gif",
+    "lng": -73.9305,
+    "lat": 40.723,
     "tags": [],
     "categories": [
       "figures"
@@ -2521,9 +2773,10 @@
   },
   {
     "id": 253,
-    "src": "/glifs/253.gif",
-    "lng": -74.016642,
-    "lat": 40.720375,
+    "src": "/glifs-static/253.png",
+    "gif": "/glifs/253.gif",
+    "lng": -74.0155,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "animals"
@@ -2531,9 +2784,10 @@
   },
   {
     "id": 254,
-    "src": "/glifs/254.gif",
-    "lng": -74.009282,
-    "lat": 40.720436,
+    "src": "/glifs-static/254.png",
+    "gif": "/glifs/254.gif",
+    "lng": -74.0105,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "figures"
@@ -2541,9 +2795,10 @@
   },
   {
     "id": 255,
-    "src": "/glifs/255.gif",
-    "lng": -74.004341,
-    "lat": 40.720186,
+    "src": "/glifs-static/255.png",
+    "gif": "/glifs/255.gif",
+    "lng": -74.0055,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "faces"
@@ -2551,9 +2806,10 @@
   },
   {
     "id": 256,
-    "src": "/glifs/256.gif",
-    "lng": -73.999597,
-    "lat": 40.718841,
+    "src": "/glifs-static/256.png",
+    "gif": "/glifs/256.gif",
+    "lng": -74.0005,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "symbols"
@@ -2561,9 +2817,10 @@
   },
   {
     "id": 257,
-    "src": "/glifs/257.gif",
-    "lng": -73.995861,
-    "lat": 40.716277,
+    "src": "/glifs-static/257.png",
+    "gif": "/glifs/257.gif",
+    "lng": -73.9955,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "symbols"
@@ -2571,9 +2828,10 @@
   },
   {
     "id": 258,
-    "src": "/glifs/258.gif",
-    "lng": -73.991281,
-    "lat": 40.717905,
+    "src": "/glifs-static/258.png",
+    "gif": "/glifs/258.gif",
+    "lng": -73.9905,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "faces"
@@ -2581,9 +2839,10 @@
   },
   {
     "id": 259,
-    "src": "/glifs/259.gif",
-    "lng": -73.985929,
-    "lat": 40.717366,
+    "src": "/glifs-static/259.png",
+    "gif": "/glifs/259.gif",
+    "lng": -73.9855,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "symbols"
@@ -2591,9 +2850,10 @@
   },
   {
     "id": 260,
-    "src": "/glifs/260.gif",
-    "lng": -73.982713,
-    "lat": 40.717355,
+    "src": "/glifs-static/260.png",
+    "gif": "/glifs/260.gif",
+    "lng": -73.9805,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "symbols"
@@ -2601,9 +2861,10 @@
   },
   {
     "id": 261,
-    "src": "/glifs/261.gif",
-    "lng": -73.979176,
-    "lat": 40.71596,
+    "src": "/glifs-static/261.png",
+    "gif": "/glifs/261.gif",
+    "lng": -73.9755,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "items"
@@ -2611,9 +2872,10 @@
   },
   {
     "id": 262,
-    "src": "/glifs/262.gif",
-    "lng": -73.972747,
-    "lat": 40.717011,
+    "src": "/glifs-static/262.png",
+    "gif": "/glifs/262.gif",
+    "lng": -73.9705,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "faces"
@@ -2621,9 +2883,10 @@
   },
   {
     "id": 263,
-    "src": "/glifs/263.gif",
-    "lng": -73.966816,
-    "lat": 40.718183,
+    "src": "/glifs-static/263.png",
+    "gif": "/glifs/263.gif",
+    "lng": -73.9655,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "figures"
@@ -2631,9 +2894,10 @@
   },
   {
     "id": 264,
-    "src": "/glifs/264.gif",
-    "lng": -73.96195,
-    "lat": 40.719117,
+    "src": "/glifs-static/264.png",
+    "gif": "/glifs/264.gif",
+    "lng": -73.9605,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "circles"
@@ -2641,9 +2905,10 @@
   },
   {
     "id": 265,
-    "src": "/glifs/265.gif",
-    "lng": -73.958029,
-    "lat": 40.721113,
+    "src": "/glifs-static/265.png",
+    "gif": "/glifs/265.gif",
+    "lng": -73.9555,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "circles"
@@ -2651,9 +2916,10 @@
   },
   {
     "id": 266,
-    "src": "/glifs/266.gif",
-    "lng": -73.954204,
-    "lat": 40.719979,
+    "src": "/glifs-static/266.png",
+    "gif": "/glifs/266.gif",
+    "lng": -73.9505,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "animals"
@@ -2661,9 +2927,10 @@
   },
   {
     "id": 267,
-    "src": "/glifs/267.gif",
-    "lng": -73.948616,
-    "lat": 40.721086,
+    "src": "/glifs-static/267.png",
+    "gif": "/glifs/267.gif",
+    "lng": -73.9455,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "faces"
@@ -2671,9 +2938,10 @@
   },
   {
     "id": 268,
-    "src": "/glifs/268.gif",
-    "lng": -73.940208,
-    "lat": 40.718813,
+    "src": "/glifs-static/268.png",
+    "gif": "/glifs/268.gif",
+    "lng": -73.9405,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "figures"
@@ -2681,9 +2949,10 @@
   },
   {
     "id": 269,
-    "src": "/glifs/269.gif",
-    "lng": -73.93517,
-    "lat": 40.719216,
+    "src": "/glifs-static/269.png",
+    "gif": "/glifs/269.gif",
+    "lng": -73.9355,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "animals"
@@ -2691,9 +2960,10 @@
   },
   {
     "id": 270,
-    "src": "/glifs/270.gif",
-    "lng": -73.930745,
-    "lat": 40.718678,
+    "src": "/glifs-static/270.png",
+    "gif": "/glifs/270.gif",
+    "lng": -73.9305,
+    "lat": 40.717,
     "tags": [],
     "categories": [
       "symbols"
@@ -2701,9 +2971,10 @@
   },
   {
     "id": 271,
-    "src": "/glifs/271.gif",
-    "lng": -74.016119,
-    "lat": 40.711362,
+    "src": "/glifs-static/271.png",
+    "gif": "/glifs/271.gif",
+    "lng": -74.0155,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2711,9 +2982,10 @@
   },
   {
     "id": 272,
-    "src": "/glifs/272.gif",
-    "lng": -74.010411,
-    "lat": 40.709805,
+    "src": "/glifs-static/272.png",
+    "gif": "/glifs/272.gif",
+    "lng": -74.0105,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2721,9 +2993,10 @@
   },
   {
     "id": 273,
-    "src": "/glifs/273.gif",
-    "lng": -74.006047,
-    "lat": 40.710659,
+    "src": "/glifs-static/273.png",
+    "gif": "/glifs/273.gif",
+    "lng": -74.0055,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2731,9 +3004,10 @@
   },
   {
     "id": 274,
-    "src": "/glifs/274.gif",
-    "lng": -74.000468,
-    "lat": 40.711591,
+    "src": "/glifs-static/274.png",
+    "gif": "/glifs/274.gif",
+    "lng": -74.0005,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "circles"
@@ -2741,9 +3015,10 @@
   },
   {
     "id": 275,
-    "src": "/glifs/275.gif",
-    "lng": -73.998016,
-    "lat": 40.709755,
+    "src": "/glifs-static/275.png",
+    "gif": "/glifs/275.gif",
+    "lng": -73.9955,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2751,9 +3026,10 @@
   },
   {
     "id": 276,
-    "src": "/glifs/276.gif",
-    "lng": -73.993138,
-    "lat": 40.711262,
+    "src": "/glifs-static/276.png",
+    "gif": "/glifs/276.gif",
+    "lng": -73.9905,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2761,9 +3037,10 @@
   },
   {
     "id": 277,
-    "src": "/glifs/277.gif",
-    "lng": -73.987214,
-    "lat": 40.711271,
+    "src": "/glifs-static/277.png",
+    "gif": "/glifs/277.gif",
+    "lng": -73.9855,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "figures"
@@ -2771,9 +3048,10 @@
   },
   {
     "id": 278,
-    "src": "/glifs/278.gif",
-    "lng": -73.983169,
-    "lat": 40.709846,
+    "src": "/glifs-static/278.png",
+    "gif": "/glifs/278.gif",
+    "lng": -73.9805,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2781,9 +3059,10 @@
   },
   {
     "id": 279,
-    "src": "/glifs/279.gif",
-    "lng": -73.97862,
-    "lat": 40.714081,
+    "src": "/glifs-static/279.png",
+    "gif": "/glifs/279.gif",
+    "lng": -73.9755,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "circles"
@@ -2791,9 +3070,10 @@
   },
   {
     "id": 280,
-    "src": "/glifs/280.gif",
-    "lng": -73.973298,
-    "lat": 40.7127,
+    "src": "/glifs-static/280.png",
+    "gif": "/glifs/280.gif",
+    "lng": -73.9705,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "letters"
@@ -2801,9 +3081,10 @@
   },
   {
     "id": 281,
-    "src": "/glifs/281.gif",
-    "lng": -73.968953,
-    "lat": 40.715422,
+    "src": "/glifs-static/281.png",
+    "gif": "/glifs/281.gif",
+    "lng": -73.9655,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2811,9 +3092,10 @@
   },
   {
     "id": 282,
-    "src": "/glifs/282.gif",
-    "lng": -73.960877,
-    "lat": 40.715388,
+    "src": "/glifs-static/282.png",
+    "gif": "/glifs/282.gif",
+    "lng": -73.9605,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2821,9 +3103,10 @@
   },
   {
     "id": 283,
-    "src": "/glifs/283.gif",
-    "lng": -73.956065,
-    "lat": 40.714637,
+    "src": "/glifs-static/283.png",
+    "gif": "/glifs/283.gif",
+    "lng": -73.9555,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2831,9 +3114,10 @@
   },
   {
     "id": 284,
-    "src": "/glifs/284.gif",
-    "lng": -73.950852,
-    "lat": 40.715136,
+    "src": "/glifs-static/284.png",
+    "gif": "/glifs/284.gif",
+    "lng": -73.9505,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "figures"
@@ -2841,9 +3125,10 @@
   },
   {
     "id": 285,
-    "src": "/glifs/285.gif",
-    "lng": -73.944571,
-    "lat": 40.713053,
+    "src": "/glifs-static/285.png",
+    "gif": "/glifs/285.gif",
+    "lng": -73.9455,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "symbols"
@@ -2851,9 +3136,10 @@
   },
   {
     "id": 286,
-    "src": "/glifs/286.gif",
-    "lng": -73.94042,
-    "lat": 40.711628,
+    "src": "/glifs-static/286.png",
+    "gif": "/glifs/286.gif",
+    "lng": -73.9405,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "letters"
@@ -2861,9 +3147,10 @@
   },
   {
     "id": 287,
-    "src": "/glifs/287.gif",
-    "lng": -73.93591,
-    "lat": 40.709573,
+    "src": "/glifs-static/287.png",
+    "gif": "/glifs/287.gif",
+    "lng": -73.9355,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2871,9 +3158,10 @@
   },
   {
     "id": 288,
-    "src": "/glifs/288.gif",
-    "lng": -73.931164,
-    "lat": 40.710533,
+    "src": "/glifs-static/288.png",
+    "gif": "/glifs/288.gif",
+    "lng": -73.9305,
+    "lat": 40.711,
     "tags": [],
     "categories": [
       "faces"
@@ -2881,9 +3169,10 @@
   },
   {
     "id": 289,
-    "src": "/glifs/289.gif",
-    "lng": -74.015827,
-    "lat": 40.704015,
+    "src": "/glifs-static/289.png",
+    "gif": "/glifs/289.gif",
+    "lng": -74.0155,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "symbols"
@@ -2891,9 +3180,10 @@
   },
   {
     "id": 290,
-    "src": "/glifs/290.gif",
-    "lng": -74.012533,
-    "lat": 40.704896,
+    "src": "/glifs-static/290.png",
+    "gif": "/glifs/290.gif",
+    "lng": -74.0105,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "items"
@@ -2901,9 +3191,10 @@
   },
   {
     "id": 291,
-    "src": "/glifs/291.gif",
-    "lng": -74.007952,
-    "lat": 40.705853,
+    "src": "/glifs-static/291.png",
+    "gif": "/glifs/291.gif",
+    "lng": -74.0055,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "animals"
@@ -2911,9 +3202,10 @@
   },
   {
     "id": 292,
-    "src": "/glifs/292.gif",
-    "lng": -74.002008,
-    "lat": 40.705824,
+    "src": "/glifs-static/292.png",
+    "gif": "/glifs/292.gif",
+    "lng": -74.0005,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "faces"
@@ -2921,9 +3213,10 @@
   },
   {
     "id": 293,
-    "src": "/glifs/293.gif",
-    "lng": -73.997426,
-    "lat": 40.705875,
+    "src": "/glifs-static/293.png",
+    "gif": "/glifs/293.gif",
+    "lng": -73.9955,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "animals"
@@ -2931,9 +3224,10 @@
   },
   {
     "id": 294,
-    "src": "/glifs/294.gif",
-    "lng": -73.992839,
-    "lat": 40.708757,
+    "src": "/glifs-static/294.png",
+    "gif": "/glifs/294.gif",
+    "lng": -73.9905,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "circles"
@@ -2941,9 +3235,10 @@
   },
   {
     "id": 295,
-    "src": "/glifs/295.gif",
-    "lng": -73.988477,
-    "lat": 40.708952,
+    "src": "/glifs-static/295.png",
+    "gif": "/glifs/295.gif",
+    "lng": -73.9855,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "hands"
@@ -2951,9 +3246,10 @@
   },
   {
     "id": 296,
-    "src": "/glifs/296.gif",
-    "lng": -73.981781,
-    "lat": 40.707543,
+    "src": "/glifs-static/296.png",
+    "gif": "/glifs/296.gif",
+    "lng": -73.9805,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "symbols"
@@ -2961,9 +3257,10 @@
   },
   {
     "id": 297,
-    "src": "/glifs/297.gif",
-    "lng": -73.976672,
-    "lat": 40.707878,
+    "src": "/glifs-static/297.png",
+    "gif": "/glifs/297.gif",
+    "lng": -73.9755,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "symbols"
@@ -2971,9 +3268,10 @@
   },
   {
     "id": 298,
-    "src": "/glifs/298.gif",
-    "lng": -73.971018,
-    "lat": 40.707046,
+    "src": "/glifs-static/298.png",
+    "gif": "/glifs/298.gif",
+    "lng": -73.9705,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "faces"
@@ -2981,9 +3279,10 @@
   },
   {
     "id": 299,
-    "src": "/glifs/299.gif",
-    "lng": -73.96455,
-    "lat": 40.707261,
+    "src": "/glifs-static/299.png",
+    "gif": "/glifs/299.gif",
+    "lng": -73.9655,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "figures"
@@ -2991,9 +3290,10 @@
   },
   {
     "id": 300,
-    "src": "/glifs/300.gif",
-    "lng": -73.961358,
-    "lat": 40.709108,
+    "src": "/glifs-static/300.png",
+    "gif": "/glifs/300.gif",
+    "lng": -73.9605,
+    "lat": 40.705,
     "tags": [],
     "categories": [
       "animals"
