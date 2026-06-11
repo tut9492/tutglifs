@@ -52,21 +52,27 @@ sources if you ever need to regenerate it.
 
 - **`src/components/GlifMap.tsx`** — the whole surface. The glifs are a fixed-pixel
   CSS grid (not map markers), so the 3px gap stays constant at any zoom. Pan/zoom
-  gestures accumulate and apply to both the grid and the MapLibre camera **once per
-  animation frame**, which keeps the live vector map smooth.
+  gestures accumulate and apply to both the grid and the backdrop **once per
+  animation frame**.
+- **Backdrop** — a static, pre-rendered NYC image (`public/map/nyc.png`) that is
+  CSS-translated/scaled in lockstep with the grid. There is **no live map engine**
+  and no runtime tile loading. The image is rendered from
+  [OpenStreetMap](https://www.openstreetmap.org/copyright) data via
+  [Protomaps](https://protomaps.com); `public/map/nyc.pmtiles` is kept in the repo
+  only as the source for regenerating that snapshot.
 - **`src/data/categories.ts`** — the collections (id, label, color).
 - **`public/glifs.json`** — one record per glif: `{ id, src, gif, lng, lat,
-  categories, tags }`. The `categories` array is the contribution surface.
-- **`scripts/`** — `setup.mjs` (fetch art + build thumbnails), `gen-glifs.mjs`
-  (regenerate the grid layout), `apply-categories.mjs` (apply the seeded taxonomy).
-- **Basemap** — `public/map/nyc.pmtiles`, an OpenStreetMap extract served via
-  [pmtiles](https://github.com/protomaps/PMTiles) + [Protomaps](https://protomaps.com),
-  rendered label-free with darkened roads.
+  categories, tags }`. The `categories` array is the contribution surface
+  (`lng`/`lat` are legacy fields from an earlier geo layout — unused, don't edit).
+- **`scripts/`** — `setup.mjs` (refetch art + rebuild thumbnails, optional) and
+  `validate-glifs.mjs` (taxonomy guard, runs in CI). `scripts/legacy/` holds
+  retired bootstrap scripts — **do not run them**; they predate the curated
+  taxonomy and would overwrite it.
 
 ### Stack
 
-Next.js 16 (App Router) · React 19 · TypeScript · MapLibre GL JS · Protomaps ·
-Tailwind CSS. No backend, no database, no auth — it's a static front-end.
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS. No backend, no
+database, no auth, no map engine — it's a static front-end.
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback, type CSSProperties } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo, type CSSProperties } from "react";
 import { CATEGORIES } from "@/data/categories";
 import EditCategories from "@/components/EditCategories";
 
@@ -73,17 +73,34 @@ function loadOverrides(): Record<number, string> {
 export default function GlifMap() {
   const stageRef = useRef<HTMLDivElement>(null);
   const [glifs, setGlifs] = useState<Glif[]>([]);
-  const [counts, setCounts] = useState<Record<string, number>>({});
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [cols, setCols] = useState(COLS);
   const [view, setView] = useState<View>({ tile: 40, x: 0, y: 0 });
-  const viewRef = useRef(view);
-  viewRef.current = view;
   const [img, setImg] = useState<ImgView>({ scale: 1, x: 0, y: 0 });
-  const imgRef = useRef(img);
-  imgRef.current = img;
   const [hover, setHover] = useState<number | null>(null);
   const [editing, setEditing] = useState(false);
+
+  // Latest view/img for event handlers. Updated ONLY via applyView/applyImg
+  // (never during render — see react-hooks/refs).
+  const viewRef = useRef<View>({ tile: 40, x: 0, y: 0 });
+  const imgRef = useRef<ImgView>({ scale: 1, x: 0, y: 0 });
+  const applyView = useCallback((v: View) => {
+    viewRef.current = v;
+    setView(v);
+  }, []);
+  const applyImg = useCallback((iv: ImgView) => {
+    imgRef.current = iv;
+    setImg(iv);
+  }, []);
+
+  // pill counts derived from current glifs (updates live during edits)
+  const counts = useMemo(() => {
+    const c: Record<string, number> = {};
+    for (const g of glifs) {
+      const p = g.categories[0];
+      if (p) c[p] = (c[p] || 0) + 1;
+    }
+    return c;
+  }, [glifs]);
 
   // Gestures accumulate into `pending` and are applied to BOTH the grid and the
   // coupled backdrop image ONCE per animation frame (keeps the 300-tile grid from
@@ -121,12 +138,9 @@ export default function GlifMap() {
       p.pdy = 0;
     }
 
-    viewRef.current = v;
-    setView(v);
-    iv = clampImg(iv);
-    imgRef.current = iv;
-    setImg(iv);
-  }, []);
+    applyView(v);
+    applyImg(clampImg(iv));
+  }, [applyView, applyImg]);
 
   const schedule = useCallback(() => {
     const p = pendingRef.current;
@@ -136,32 +150,6 @@ export default function GlifMap() {
   useEffect(() => () => {
     if (pendingRef.current.raf) cancelAnimationFrame(pendingRef.current.raf);
   }, []);
-
-  // --- load glifs, applying any locally-saved edits, sorted into collection bands ---
-  useEffect(() => {
-    fetch("/glifs.json")
-      .then((r) => r.json())
-      .then((data: Glif[]) => {
-        const overrides = loadOverrides();
-        for (const g of data) {
-          if (Object.prototype.hasOwnProperty.call(overrides, g.id)) {
-            const v = overrides[g.id];
-            g.categories = v ? [v] : []; // "" = bucket
-          }
-        }
-        setGlifs(sortGlifs(data));
-      });
-  }, []);
-
-  // counts derived from current glifs (so edits update the pills live)
-  useEffect(() => {
-    const c: Record<string, number> = {};
-    for (const g of glifs) {
-      const p = g.categories[0];
-      if (p) c[p] = (c[p] || 0) + 1;
-    }
-    setCounts(c);
-  }, [glifs]);
 
   // Default view: whole table visible (contained), centered in the space to the
   // right of the left sidebar, with the map showing around it.
@@ -191,20 +179,40 @@ export default function GlifMap() {
     return clampImg({ scale, x: (vw - IMG_W * scale) / 2, y: (vh - IMG_H * scale) / 2 });
   }, []);
 
-  // Fit the table + backdrop on load + resize. Toggling collections does NOT
-  // relayout — every glif stays in place so you can verify the collections.
+  // --- load glifs (applying locally-saved edits), then fit the initial view.
+  // Fitting happens HERE, once — not on later glifs changes — so editor
+  // reassignments never reset the user's pan/zoom.
   useEffect(() => {
-    if (glifs.length === 0) return;
-    setCols(COLS);
-    setView(fitTable());
-    setImg(fitImg());
+    let cancelled = false;
+    fetch("/glifs.json")
+      .then((r) => r.json())
+      .then((data: Glif[]) => {
+        if (cancelled) return;
+        const overrides = loadOverrides();
+        for (const g of data) {
+          if (Object.prototype.hasOwnProperty.call(overrides, g.id)) {
+            const v = overrides[g.id];
+            g.categories = v ? [v] : []; // "" = bucket
+          }
+        }
+        setGlifs(sortGlifs(data));
+        applyView(fitTable());
+        applyImg(fitImg());
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [applyView, applyImg, fitTable, fitImg]);
+
+  // Re-fit on window resize (listener only — no state set during the effect body).
+  useEffect(() => {
     const onResize = () => {
-      setView(fitTable());
-      setImg(fitImg());
+      applyView(fitTable());
+      applyImg(fitImg());
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [glifs, fitTable, fitImg]);
+  }, [applyView, applyImg, fitTable, fitImg]);
 
   // queue a zoom about a screen point (applied on the next frame by flush())
   const zoomAbout = useCallback(
@@ -277,7 +285,8 @@ export default function GlifMap() {
   const toggle = (id: string) =>
     setSelected((prev) => {
       const n = new Set(prev);
-      n.has(id) ? n.delete(id) : n.add(id);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
       return n;
     });
 
@@ -338,7 +347,7 @@ export default function GlifMap() {
           className="tg-grid"
           style={{
             transform: `translate(${view.x}px, ${view.y}px)`,
-            gridTemplateColumns: `repeat(${cols}, ${view.tile}px)`,
+            gridTemplateColumns: `repeat(${COLS}, ${view.tile}px)`,
             gap: `${GAP}px`,
           }}
         >
@@ -354,6 +363,7 @@ export default function GlifMap() {
                 onMouseEnter={() => setHover(g.id)}
                 onMouseLeave={() => setHover((h) => (h === g.id ? null : h))}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element -- 300 small local assets; next/image overhead unwanted */}
                 <img
                   src={hover === g.id ? g.gif : g.src}
                   alt={`glif #${g.id}`}

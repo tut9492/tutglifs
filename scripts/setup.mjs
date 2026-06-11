@@ -1,18 +1,20 @@
-// One-time asset setup for tutglifs.
+// OPTIONAL asset regeneration for tutglifs.
 //
-// The GLiFS artwork is © Efdot Studio / Transient Labs and is NOT redistributed
-// in this repository. This script pulls the 300 glifs (and the GLiFS wordmark)
-// from the official public sources and builds the local thumbnails the app uses.
+// The glif images are committed to the repo, so a fresh clone needs no setup.
+// Run this only to (re)build the local image set from the official sources —
+// e.g. after deleting assets or if the upstream art is updated.
+//
+// The GLiFS artwork is © Efdot Studio / Transient Labs; see NOTICE.
 //
 // Run: npm run setup   (safe to re-run; it skips files that already exist)
 //
-// What it writes (all git-ignored):
+// What it writes (all committed):
 //   public/glifs/<1..300>.gif          source art, used on hover
 //   public/glifs-static/<1..300>.png   192px first-frame thumbnails (the grid)
 //   public/glifs-logo.gif              the GLiFS wordmark (top-left logo)
 //
-// The NYC basemap (public/map/nyc.pmtiles) is OpenStreetMap-derived open data and
-// is committed to the repo, so it is not fetched here.
+// The NYC backdrop (public/map/nyc.png, rendered from OpenStreetMap-derived data)
+// is committed and not touched here.
 
 import { mkdir, access, writeFile, readFile } from "node:fs/promises";
 import { constants } from "node:fs";

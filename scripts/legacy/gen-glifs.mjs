@@ -1,9 +1,7 @@
-// Generates public/glifs.json — one record per glif (1..300).
-// v1: lays all 300 out in a deterministic grid over the Manhattan core so the
-// whole set is visible when zoomed out. `category` starts null; the taxonomy is
-// seeded/refined separately and is the open-source contribution surface.
-//
-// Run: node scripts/gen-glifs.mjs
+// ⚠️ LEGACY — DO NOT RUN. This was the original bootstrap that generated
+// public/glifs.json from scratch. Running it now would OVERWRITE the curated
+// taxonomy with an obsolete schema (`category: null`, no `categories[]`) and
+// fail scripts/validate-glifs.mjs. Kept for historical reference only.
 import { writeFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";

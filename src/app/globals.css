@@ -265,6 +265,24 @@ body {
   text-align: left;
 }
 
+/* Map data attribution (ODbL requires visible credit) */
+.tg-attrib {
+  margin: 0;
+  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
+  font-size: 8.5px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+.tg-attrib a {
+  color: #6a6a6a;
+  text-decoration: underline;
+}
+.tg-attrib a:hover {
+  color: #222;
+}
+
 /* Edit-collections button (sidebar) */
 .tg-editbtn {
   margin-top: 4px;

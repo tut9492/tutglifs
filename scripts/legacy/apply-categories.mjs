@@ -1,9 +1,7 @@
-// Applies the seeded taxonomy to public/glifs.json.
-// PRIMARY[id] = best-guess primary category from a first visual pass over all 300.
-// This is a SEED — the whole point of tutglifs is that the community refines it.
-// Categories use an array so a glif can belong to several later; v1 seeds one each.
-//
-// Run: node scripts/apply-categories.mjs
+// ⚠️ LEGACY — DO NOT RUN. This applied the ORIGINAL machine-seeded taxonomy
+// (including the since-removed `letters` collection). public/glifs.json now
+// holds the maintainer-curated taxonomy; running this would clobber it and
+// fail scripts/validate-glifs.mjs. Kept for historical reference only.
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";

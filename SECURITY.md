@@ -14,9 +14,10 @@ Hardening in place:
   `Permissions-Policy`, HSTS) — see [`next.config.ts`](./next.config.ts).
 - No secrets in the repo, no `.env` required, no `eval`, no
   `dangerouslySetInnerHTML`.
-- External outbound requests are limited to: the Protomaps glyph CDN
-  (`protomaps.github.io`) at runtime, and — only during `npm run setup` — the
-  official GLiFS image sources. These are pinned in CSP `connect-src` / `img-src`.
+- **Zero external requests at runtime.** All assets (glif images, the map
+  backdrop, fonts) are served same-origin; CSP `connect-src`/`font-src` are
+  locked to `'self'`. The only outbound fetches happen during the optional
+  `npm run setup` (developer machine, official GLiFS image sources).
 
 ## Reporting a vulnerability
 
