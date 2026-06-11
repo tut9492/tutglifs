@@ -97,13 +97,13 @@ body {
 .tg-logo {
   position: fixed;
   left: 18px;
-  bottom: 16px;
+  top: 14px;
   z-index: 20;
   display: flex;
   flex-direction: column;
   gap: 3px;
   text-decoration: none;
-  transform-origin: left bottom;
+  transform-origin: left top;
   transition: transform 0.15s ease;
 }
 .tg-logo:hover {
@@ -134,32 +134,29 @@ body {
   margin-top: 3px;
 }
 
-/* Crayon collection toggles */
+/* Collection toggles — left sidebar column */
 .tg-cats {
   position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 116px;
+  left: 18px;
   z-index: 15;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 9px;
-  max-width: min(94vw, 960px);
-  padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  border-radius: 18px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
 }
 .tg-chip {
   --c: #777;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 14px 6px;
-  font-family: var(--font-crayon), "Comic Sans MS", cursive;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 148px;
+  padding: 6px 14px 7px;
+  font-family: var(--font-brand), "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 16px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   color: var(--c);
   background: #fff;
   border: 2.5px solid var(--c);
@@ -168,9 +165,7 @@ body {
   transition: transform 0.1s ease, background 0.15s ease, color 0.15s ease;
   white-space: nowrap;
 }
-.tg-chip:nth-child(odd) { transform: rotate(-1.5deg); }
-.tg-chip:nth-child(even) { transform: rotate(1.5deg); }
-.tg-chip:hover { transform: translateY(-2px) rotate(0deg); }
+.tg-chip:hover { transform: translateX(2px); }
 .tg-chip.is-on {
   color: #fff;
   background: var(--c);
@@ -179,9 +174,10 @@ body {
 .tg-chip.is-on .tg-count { color: rgba(255, 255, 255, 0.9); }
 .tg-dot { display: none; }
 .tg-count {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--c);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .tg-chip.is-on .tg-count { opacity: 1; }
 .tg-clear {
@@ -189,4 +185,8 @@ body {
   color: #fff;
   background: #333;
   border-color: #333;
+  justify-content: center;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
