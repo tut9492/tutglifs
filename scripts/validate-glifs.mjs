@@ -34,9 +34,10 @@ for (const g of glifs) {
   if (g.src !== `/glifs-static/${g.id}.png`) errors.push(`${tag}: unexpected src "${g.src}"`);
   if (g.gif !== `/glifs/${g.id}.gif`) errors.push(`${tag}: unexpected gif "${g.gif}"`);
   if (typeof g.lng !== "number" || typeof g.lat !== "number") errors.push(`${tag}: lng/lat must be numbers`);
-  if (!Array.isArray(g.categories) || g.categories.length === 0) {
-    errors.push(`${tag}: categories must be a non-empty array`);
+  if (!Array.isArray(g.categories)) {
+    errors.push(`${tag}: categories must be an array`);
   } else {
+    // An empty array is allowed — it's the "bucket" (no home yet).
     for (const c of g.categories) {
       if (!VALID.has(c)) errors.push(`${tag}: unknown collection "${c}" (valid: ${[...VALID].join(", ")})`);
     }
@@ -50,4 +51,6 @@ if (errors.length) {
   process.exit(1);
 }
 
+const unsorted = glifs.filter((g) => Array.isArray(g.categories) && g.categories.length === 0).length;
 console.log(`✓ glifs.json valid: ${glifs.length} glifs, all collections known.`);
+if (unsorted) console.log(`  note: ${unsorted} glif(s) in the bucket (no collection yet).`);

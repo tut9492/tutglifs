@@ -166,7 +166,10 @@ export default function GlifMap() {
       .then((data: Glif[]) => {
         const overrides = loadOverrides();
         for (const g of data) {
-          if (overrides[g.id]) g.categories = [overrides[g.id]];
+          if (Object.prototype.hasOwnProperty.call(overrides, g.id)) {
+            const v = overrides[g.id];
+            g.categories = v ? [v] : []; // "" = bucket
+          }
         }
         setGlifs(sortGlifs(data));
       });
@@ -290,8 +293,11 @@ export default function GlifMap() {
 
   // --- edit collections (drag & drop reassignment) ---
   const reassign = useCallback((id: number, category: string) => {
+    // category === "" means the bucket (no collection yet)
     setGlifs((prev) => {
-      const next = prev.map((g) => (g.id === id ? { ...g, categories: [category] } : g));
+      const next = prev.map((g) =>
+        g.id === id ? { ...g, categories: category ? [category] : [] } : g
+      );
       try {
         const o = loadOverrides();
         o[id] = category;
