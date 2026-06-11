@@ -9,7 +9,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 // Keep in sync with src/data/categories.ts
 const VALID = new Set([
   "faces", "figures", "hands", "animals", "nature",
-  "circles", "items", "symbols", "letters",
+  "circles", "items", "symbols",
 ]);
 const EXPECTED_COUNT = 300;
 

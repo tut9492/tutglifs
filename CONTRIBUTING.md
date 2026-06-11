@@ -57,8 +57,9 @@ To verify and fix by hand:
 
 - `categories[0]` is the **primary** collection (drives sorting + highlight).
   Use exactly one of the ids in [`src/data/categories.ts`](./src/data/categories.ts):
-  `faces`, `figures`, `hands`, `animals`, `nature`, `circles`, `items`, `symbols`,
-  `letters`.
+  `faces`, `figures`, `hands`, `animals`, `nature`, `circles`, `items` (labeled
+  "Objects / Abstract"), `symbols` (labeled "Squares"). An empty `categories: []`
+  is the "bucket" — a glif with no home yet.
 - `tags` is free-form — add descriptive words to enrich the language.
 - Don't change `id`, `src`, `gif`, `lng`, or `lat`.
 

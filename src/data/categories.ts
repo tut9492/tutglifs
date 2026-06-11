@@ -1,15 +1,15 @@
-// The 9 seed categories of the glif language. Each maps to a NYC neighborhood —
-// when a category is toggled on, its glifs cluster into that centroid.
-// This list (and the per-glif categories in public/glifs.json) is the
-// open-source contribution surface: PR new categories, recolor, or re-home them.
+// The collections of the glif language. The id is stable (used in glifs.json);
+// the label is what the UI shows. This list (and the per-glif categories in
+// public/glifs.json) is the open-source contribution surface: PR new
+// collections, recolor, relabel, or re-home glifs.
 
 export type Category = {
   id: string;
   label: string;
   color: string;
-  /** Neighborhood centroid [lng, lat] the glifs cluster into. */
+  /** Neighborhood centroid [lng, lat] (vestigial — clustering is parked). */
   centroid: [number, number];
-  /** Human name of the neighborhood, shown in the UI. */
+  /** Human name of the neighborhood. */
   hood: string;
 };
 
@@ -20,9 +20,8 @@ export const CATEGORIES: Category[] = [
   { id: "animals", label: "Animals", color: "#2E8B57", centroid: [-73.9600, 40.7730], hood: "Upper East Side" },
   { id: "nature", label: "Nature", color: "#8FBC4B", centroid: [-73.9680, 40.7825], hood: "Central Park" },
   { id: "circles", label: "Circles", color: "#8E5DD6", centroid: [-74.0110, 40.7060], hood: "Financial District" },
-  { id: "items", label: "Items", color: "#17A2A2", centroid: [-74.0000, 40.7460], hood: "Chelsea" },
-  { id: "symbols", label: "Symbols", color: "#5B6472", centroid: [-73.9560, 40.7155], hood: "Williamsburg" },
-  { id: "letters", label: "Letters", color: "#D7263D", centroid: [-73.9855, 40.7180], hood: "Lower East Side" },
+  { id: "items", label: "Objects / Abstract", color: "#17A2A2", centroid: [-74.0000, 40.7460], hood: "Chelsea" },
+  { id: "symbols", label: "Squares", color: "#5B6472", centroid: [-73.9560, 40.7155], hood: "Williamsburg" },
 ];
 
 export const CATEGORY_BY_ID: Record<string, Category> = Object.fromEntries(

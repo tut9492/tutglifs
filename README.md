@@ -2,7 +2,7 @@
 
 A zoomable map + dictionary of the **300 [GLiFS](https://www.glifs.art/) by Efdot**,
 laid out as a fixed table over New York City and organized into **collections**
-(faces, figures, hands, animals, nature, circles, items, symbols, letters) so the
+(faces, figures, hands, animals, nature, circles, objects/abstract, squares) so the
 community can start to read and build the glif "language."
 
 > [!IMPORTANT]
@@ -54,7 +54,7 @@ sources if you ever need to regenerate it.
   CSS grid (not map markers), so the 3px gap stays constant at any zoom. Pan/zoom
   gestures accumulate and apply to both the grid and the MapLibre camera **once per
   animation frame**, which keeps the live vector map smooth.
-- **`src/data/categories.ts`** — the 9 collections (id, label, color).
+- **`src/data/categories.ts`** — the collections (id, label, color).
 - **`public/glifs.json`** — one record per glif: `{ id, src, gif, lng, lat,
   categories, tags }`. The `categories` array is the contribution surface.
 - **`scripts/`** — `setup.mjs` (fetch art + build thumbnails), `gen-glifs.mjs`
