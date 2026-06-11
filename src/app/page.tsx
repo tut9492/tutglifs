@@ -4,34 +4,56 @@ import dynamic from "next/dynamic";
 
 const GlifMap = dynamic(() => import("@/components/GlifMap"), { ssr: false });
 
-// GLIFS brand wordmark — per-letter colors matched to the logo
-const GLIFS = [
-  { ch: "G", color: "#1c2b50" }, // navy
-  { ch: "L", color: "#e8642a" }, // orange
-  { ch: "I", color: "#f2b705" }, // gold
-  { ch: "F", color: "#3a6ea5" }, // blue
-  { ch: "S", color: "#f2b705" }, // gold
-];
+const GLIFS_SITE = "https://www.glifs.art/";
 
 function Wordmark() {
   return (
+    <div className="tg-logo">
+      <a
+        className="tg-glifs"
+        href={GLIFS_SITE}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GLiFS by Efdot — glifs.art"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/glifs-logo.gif" alt="GLiFS by Efdot" />
+      </a>
+      <span className="tg-logo-guide">guide</span>
+      <a
+        className="tg-efdot"
+        href={GLIFS_SITE}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="GLiFS by Efdot — glifs.art"
+      >
+        by Efdot ↗
+      </a>
+    </div>
+  );
+}
+
+function BuiltBy() {
+  return (
     <a
-      className="tg-logo"
+      className="tg-builtby"
       href="https://x.com/tuteth_"
       target="_blank"
       rel="noopener noreferrer"
       title="built by tut — @tuteth_ on X"
     >
-      <span className="tg-logo-name">
-        {GLIFS.map(({ ch, color }, i) => (
-          <span key={i} style={{ color }}>
-            {ch}
-          </span>
-        ))}
-      </span>
-      <span className="tg-logo-guide">guide</span>
-      <span className="tg-logo-by">built by tut · @tuteth_</span>
+      <span className="tg-builtby-label">built by</span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="tg-builtby-logo" src="/tut-logo.png" alt="tut" />
     </a>
+  );
+}
+
+function Footnote() {
+  return (
+    <p className="tg-footnote">
+      not an official GLiFS site · open source · no wallet connect, ever
+    </p>
   );
 }
 
@@ -40,6 +62,8 @@ export default function Home() {
     <main>
       <GlifMap />
       <Wordmark />
+      <BuiltBy />
+      <Footnote />
     </main>
   );
 }

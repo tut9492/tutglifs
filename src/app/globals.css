@@ -93,7 +93,7 @@ body {
   background: #f3f3f3;
 }
 
-/* Crayon wordmark / logo — bottom-left, links to X */
+/* GLiFS-by-Efdot wordmark — top-left */
 .tg-logo {
   position: fixed;
   left: 18px;
@@ -101,37 +101,71 @@ body {
   z-index: 20;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  text-decoration: none;
-  transform-origin: left top;
+  align-items: flex-start;
+  gap: 2px;
+}
+.tg-glifs {
+  display: block;
   transition: transform 0.15s ease;
 }
-.tg-logo:hover {
-  transform: scale(1.04);
+.tg-glifs:hover {
+  transform: scale(1.03);
 }
-.tg-logo-name {
-  font-family: var(--font-brand), "Fredoka", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: clamp(34px, 4vw, 50px);
-  line-height: 0.86;
-  letter-spacing: 1px;
+.tg-glifs img {
+  width: clamp(120px, 13vw, 168px);
+  height: auto;
+  display: block;
 }
 .tg-logo-guide {
   font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
   font-weight: 500;
-  font-size: clamp(12px, 1.3vw, 16px);
+  font-size: clamp(11px, 1.2vw, 15px);
   letter-spacing: 0.42em;
   text-indent: 0.42em;
   text-transform: lowercase;
   color: #222;
-  margin-top: 4px;
+  margin-top: 2px;
 }
-.tg-logo-by {
+.tg-efdot {
   font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
   font-size: 9px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: #888;
-  margin-top: 3px;
+  text-decoration: none;
+  margin-top: 2px;
+}
+.tg-efdot:hover {
+  color: #222;
+}
+/* built-by credit at the bottom of the side nav */
+.tg-builtby {
+  position: fixed;
+  left: 18px;
+  bottom: 16px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  text-decoration: none;
+  transform-origin: left bottom;
+  transition: transform 0.15s ease;
+}
+.tg-builtby:hover {
+  transform: scale(1.05);
+}
+.tg-builtby-label {
+  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #777;
+}
+.tg-builtby-logo {
+  width: 76px;
+  height: auto;
+  display: block;
 }
 
 /* Collection toggles — left sidebar column */
@@ -189,4 +223,26 @@ body {
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* Footnote — bottom center disclaimer */
+.tg-footnote {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 14;
+  margin: 0;
+  padding: 5px 14px;
+  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  text-align: center;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(4px);
+  border-radius: 999px;
+  pointer-events: none;
 }
