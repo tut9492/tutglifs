@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Permanent_Marker } from "next/font/google";
+import { Geist, Geist_Mono, Permanent_Marker, Fredoka, Orbitron } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +18,20 @@ const crayon = Permanent_Marker({
   subsets: ["latin"],
 });
 
+// Rounded brand face for the GLIFS wordmark
+const brand = Fredoka({
+  variable: "--font-brand",
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+});
+
+// Futuristic face for "guide"
+const future = Orbitron({
+  variable: "--font-future",
+  weight: ["500", "700"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "glif dictionary — built by tut",
   description:
@@ -32,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${crayon.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${crayon.variable} ${brand.variable} ${future.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

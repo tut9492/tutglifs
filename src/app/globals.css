@@ -103,29 +103,35 @@ body {
   flex-direction: column;
   gap: 3px;
   text-decoration: none;
-  transform: rotate(-2deg);
   transform-origin: left bottom;
   transition: transform 0.15s ease;
 }
 .tg-logo:hover {
-  transform: rotate(-2deg) scale(1.04);
+  transform: scale(1.04);
 }
 .tg-logo-name {
-  font-family: var(--font-crayon), "Comic Sans MS", cursive;
-  font-size: clamp(26px, 3.4vw, 38px);
-  line-height: 0.9;
-  letter-spacing: 0.5px;
-  text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.12);
+  font-family: var(--font-brand), "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 0.86;
+  letter-spacing: 1px;
 }
-.tg-logo-name .tg-space {
-  display: inline-block;
-  width: 0.45em;
+.tg-logo-guide {
+  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.3vw, 16px);
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  text-transform: lowercase;
+  color: #222;
+  margin-top: 4px;
 }
 .tg-logo-by {
-  font-family: var(--font-crayon), "Comic Sans MS", cursive;
-  font-size: 12px;
-  color: #444;
-  letter-spacing: 0.4px;
+  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-top: 3px;
 }
 
 /* Crayon collection toggles */

@@ -4,12 +4,16 @@ import dynamic from "next/dynamic";
 
 const GlifMap = dynamic(() => import("@/components/GlifMap"), { ssr: false });
 
-// crayon palette cycled across the wordmark letters
-const CRAYONS = ["#ef4136", "#f7941e", "#ffcd00", "#39b54a", "#0072bc", "#92278f", "#ec008c"];
+// GLIFS brand wordmark — per-letter colors matched to the logo
+const GLIFS = [
+  { ch: "G", color: "#1c2b50" }, // navy
+  { ch: "L", color: "#e8642a" }, // orange
+  { ch: "I", color: "#f2b705" }, // gold
+  { ch: "F", color: "#3a6ea5" }, // blue
+  { ch: "S", color: "#f2b705" }, // gold
+];
 
 function Wordmark() {
-  const name = "glif dictionary";
-  let ci = 0;
   return (
     <a
       className="tg-logo"
@@ -19,18 +23,13 @@ function Wordmark() {
       title="built by tut — @tuteth_ on X"
     >
       <span className="tg-logo-name">
-        {name.split("").map((ch, i) =>
-          ch === " " ? (
-            <span key={i} className="tg-space">
-              &nbsp;
-            </span>
-          ) : (
-            <span key={i} style={{ color: CRAYONS[ci++ % CRAYONS.length] }}>
-              {ch}
-            </span>
-          )
-        )}
+        {GLIFS.map(({ ch, color }, i) => (
+          <span key={i} style={{ color }}>
+            {ch}
+          </span>
+        ))}
       </span>
+      <span className="tg-logo-guide">guide</span>
       <span className="tg-logo-by">built by tut · @tuteth_</span>
     </a>
   );
