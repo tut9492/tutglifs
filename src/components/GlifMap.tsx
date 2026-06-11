@@ -82,54 +82,25 @@ export default function GlifMap() {
       });
   }, []);
 
-  // Fit the active layout (full table, or the bunched selection) to the screen.
-  const fitLayout = useCallback((sel: Set<string>): { cols: number; view: View } => {
+  // Full-bleed table: 20 columns span the entire screen width.
+  const fitTable = useCallback((): View => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
+    const tile = Math.max(MIN_TILE, (vw - (COLS - 1) * GAP) / COLS);
+    const gridH = ROWS * tile + (ROWS - 1) * GAP;
+    return { tile, x: 0, y: gridH < vh ? (vh - gridH) / 2 : 56 };
+  }, []);
 
-    if (sel.size === 0) {
-      // Full-bleed table: 20 columns span the entire screen width.
-      const tile = Math.max(MIN_TILE, (vw - (COLS - 1) * GAP) / COLS);
-      const gridH = ROWS * tile + (ROWS - 1) * GAP;
-      return { cols: COLS, view: { tile, x: 0, y: gridH < vh ? (vh - gridH) / 2 : 56 } };
-    }
-
-    // Bunch: matching glifs gather into a compact, centered clump.
-    const n = glifs.filter((g) => g.categories[0] && sel.has(g.categories[0])).length || 1;
-    const bcols = Math.max(1, Math.ceil(Math.sqrt(n * 1.3)));
-    const brows = Math.ceil(n / bcols);
-    const padX = 60;
-    const padY = 150;
-    const tile = Math.max(
-      MIN_TILE,
-      Math.min(
-        MAX_TILE,
-        (vw - padX * 2 - (bcols - 1) * GAP) / bcols,
-        (vh - padY * 2 - (brows - 1) * GAP) / brows
-      )
-    );
-    const gridW = bcols * tile + (bcols - 1) * GAP;
-    const gridH = brows * tile + (brows - 1) * GAP;
-    return {
-      cols: bcols,
-      view: { tile, x: (vw - gridW) / 2, y: Math.max(96, (vh - gridH) / 2) },
-    };
-  }, [glifs]);
-
-  // Re-fit whenever the selection (or data / window) changes.
+  // Fit the table on load + resize. Toggling collections does NOT relayout —
+  // every glif stays in place so you can verify the seeded categories.
   useEffect(() => {
     if (glifs.length === 0) return;
-    const { cols: c, view: v } = fitLayout(selected);
-    setCols(c);
-    setView(v);
-    const onResize = () => {
-      const r = fitLayout(selected);
-      setCols(r.cols);
-      setView(r.view);
-    };
+    setCols(COLS);
+    setView(fitTable());
+    const onResize = () => setView(fitTable());
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [selected, glifs, fitLayout]);
+  }, [glifs, fitTable]);
 
   // zoom about a screen point, keeping that point stable; gap stays constant
   const zoomAbout = useCallback((factor: number, px: number, py: number) => {
@@ -218,12 +189,12 @@ export default function GlifMap() {
         >
           {glifs.map((g) => {
             const inSel = !!g.categories[0] && selected.has(g.categories[0]);
-            const hidden = active && !inSel;
+            const faded = active && !inSel;
             return (
               <div
                 key={g.id}
                 className="tg-cell"
-                style={{ width: view.tile, height: view.tile, display: hidden ? "none" : "block" }}
+                style={{ width: view.tile, height: view.tile, opacity: faded ? 0.12 : 1 }}
                 title={`#${g.id}${g.categories[0] ? " · " + g.categories[0] : ""}`}
                 onMouseEnter={() => setHover(g.id)}
                 onMouseLeave={() => setHover((h) => (h === g.id ? null : h))}

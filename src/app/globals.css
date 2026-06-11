@@ -49,6 +49,7 @@ body {
 }
 .tg-cell {
   position: relative;
+  transition: opacity 0.2s ease;
 }
 .tg-cell img {
   width: 100%;
