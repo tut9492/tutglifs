@@ -102,14 +102,24 @@ export default function GlifMap() {
       });
   }, []);
 
-  // Full-bleed table: 20 columns span the entire screen width.
+  // Default view: whole table visible (contained), centered in the space to the
+  // right of the left sidebar, with the map showing around it.
   const fitTable = useCallback((): View => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const tile = Math.max(MIN_TILE, (vw - (COLS - 1) * GAP) / COLS);
+    const SIDEBAR = vw > 640 ? 300 : 0; // clear the left nav
+    const padR = 40;
+    const padY = 44;
+    const tileW = (vw - SIDEBAR - padR - (COLS - 1) * GAP) / COLS;
+    const tileH = (vh - padY * 2 - (ROWS - 1) * GAP) / ROWS;
+    const tile = Math.max(MIN_TILE, Math.min(tileW, tileH));
+    const gridW = COLS * tile + (COLS - 1) * GAP;
     const gridH = ROWS * tile + (ROWS - 1) * GAP;
-    // Full-bleed: span the width and center vertically so it bleeds off all edges.
-    return { tile, x: 0, y: Math.round((vh - gridH) / 2) };
+    return {
+      tile,
+      x: Math.round(SIDEBAR + (vw - SIDEBAR - gridW) / 2),
+      y: Math.round((vh - gridH) / 2),
+    };
   }, []);
 
   // Fit the table on load + resize. Toggling collections does NOT relayout —

@@ -33,27 +33,24 @@ function Wordmark() {
   );
 }
 
-function BuiltBy() {
+function Credit() {
   return (
-    <a
-      className="tg-builtby"
-      href="https://x.com/tuteth_"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="built by tut — @tuteth_ on X"
-    >
-      <span className="tg-builtby-label">built by</span>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="tg-builtby-logo" src="/tut-logo.png" alt="tut" />
-    </a>
-  );
-}
-
-function Footnote() {
-  return (
-    <p className="tg-footnote">
-      not an official GLiFS site · open source · no wallet connect, ever
-    </p>
+    <div className="tg-credit">
+      <a
+        className="tg-builtby"
+        href="https://x.com/tuteth_"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="built by tut — @tuteth_ on X"
+      >
+        <span className="tg-builtby-label">built by</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="tg-builtby-logo" src="/tut-logo.png" alt="tut" />
+      </a>
+      <p className="tg-footnote">
+        not an official GLiFS site · open source · no wallet connect, ever
+      </p>
+    </div>
   );
 }
 
@@ -62,8 +59,7 @@ export default function Home() {
     <main>
       <GlifMap />
       <Wordmark />
-      <BuiltBy />
-      <Footnote />
+      <Credit />
     </main>
   );
 }

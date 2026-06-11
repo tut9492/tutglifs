@@ -138,12 +138,19 @@ body {
 .tg-efdot:hover {
   color: #222;
 }
-/* built-by credit at the bottom of the side nav */
-.tg-builtby {
+/* built-by credit + footnote at the bottom of the side nav */
+.tg-credit {
   position: fixed;
   left: 18px;
-  bottom: 16px;
+  bottom: 14px;
   z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  max-width: 184px;
+}
+.tg-builtby {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -225,24 +232,14 @@ body {
   text-transform: uppercase;
 }
 
-/* Footnote — bottom center disclaimer */
+/* Footnote — disclaimer under the tut credit in the side panel */
 .tg-footnote {
-  position: fixed;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 14;
   margin: 0;
-  padding: 5px 14px;
   font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.12em;
+  font-size: 8.5px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #7a7a7a;
-  text-align: center;
-  white-space: nowrap;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(4px);
-  border-radius: 999px;
-  pointer-events: none;
+  color: #8a8a8a;
+  text-align: left;
 }
