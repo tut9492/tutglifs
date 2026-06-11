@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
-// Content-Security-Policy. The map engine (MapLibre) needs blob: workers and
-// wasm; Protomaps glyphs are fetched from protomaps.github.io. Next.js injects
-// inline bootstrap scripts, so 'unsafe-inline'/'unsafe-eval' remain in script-src
-// — the other directives (no objects, no framing, locked base-uri, restricted
-// connect/img/font sources) still meaningfully reduce the attack surface.
+// Content-Security-Policy. The backdrop is now a static image (no map engine, no
+// external tile/glyph fetches), so connect/font are locked to 'self'. Next.js
+// injects inline bootstrap scripts, so 'unsafe-inline'/'unsafe-eval' remain in
+// script-src — the other directives (no objects, no framing, locked base-uri,
+// restricted connect/img/font sources) still meaningfully reduce attack surface.
 const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'",
@@ -12,8 +12,8 @@ const csp = [
   "img-src 'self' data: blob:",
   "worker-src 'self' blob:",
   "child-src 'self' blob:",
-  "font-src 'self' https://protomaps.github.io",
-  "connect-src 'self' https://protomaps.github.io",
+  "font-src 'self'",
+  "connect-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

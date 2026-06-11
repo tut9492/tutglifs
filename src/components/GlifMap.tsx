@@ -1,29 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback, type CSSProperties } from "react";
-import maplibregl from "maplibre-gl";
-import { Protocol } from "pmtiles";
-import { namedTheme, noLabelsWithCustomTheme } from "protomaps-themes-base";
-import "maplibre-gl/dist/maplibre-gl.css";
 import { CATEGORIES } from "@/data/categories";
 import EditCategories from "@/components/EditCategories";
 
-const PMTILES_URL = "pmtiles:///map/nyc.pmtiles";
-
-// Minimal white basemap, but with darker (toward-black) road lines for contrast.
-const MAP_THEME = {
-  ...namedTheme("white"),
-  other: "#cfcfcf",
-  minor_service: "#cfcfcf",
-  minor_a: "#9a9a9a",
-  minor_b: "#b4b4b4",
-  link: "#7f7f7f",
-  major: "#6a6a6a",
-  highway: "#3f3f3f",
-  railway: "#9a9a9a",
-  boundaries: "#6a6a6a",
-  buildings: "#e4e4e4",
-};
+// Static NYC backdrop (a pre-rendered image — no live tile loading). Panned and
+// scaled with CSS so it stays coupled to the glif grid. Natural pixel size:
+const MAP_SRC = "/map/nyc.png";
+const IMG_W = 3000;
+const IMG_H = 1950;
 
 const COLS = 20;
 const ROWS = 15; // 20 x 15 = 300
@@ -66,9 +51,9 @@ function loadOverrides(): Record<number, string> {
   }
 }
 
+type ImgView = { scale: number; x: number; y: number };
+
 export default function GlifMap() {
-  const mapDivRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<maplibregl.Map | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const [glifs, setGlifs] = useState<Glif[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
@@ -77,20 +62,23 @@ export default function GlifMap() {
   const [view, setView] = useState<View>({ tile: 40, x: 0, y: 0 });
   const viewRef = useRef(view);
   viewRef.current = view;
+  const [img, setImg] = useState<ImgView>({ scale: 1, x: 0, y: 0 });
+  const imgRef = useRef(img);
+  imgRef.current = img;
   const [hover, setHover] = useState<number | null>(null);
   const [editing, setEditing] = useState(false);
 
   // Gestures accumulate into `pending` and are applied to BOTH the grid and the
-  // coupled map ONCE per animation frame. This stops the live vector map (and the
-  // 300-tile grid) from re-rendering on every wheel/drag event — the cause of the
-  // zoom-out lag.
+  // coupled backdrop image ONCE per animation frame (keeps the 300-tile grid from
+  // re-rendering on every wheel/drag event). The image is just CSS-transformed —
+  // no tile loading, ever.
   const pendingRef = useRef({ zf: 1, zpx: 0, zpy: 0, pdx: 0, pdy: 0, raf: 0 });
 
   const flush = useCallback(() => {
     const p = pendingRef.current;
     p.raf = 0;
     let v = viewRef.current;
-    const map = mapRef.current;
+    let iv = imgRef.current;
 
     if (p.zf !== 1) {
       const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * p.zf));
@@ -99,20 +87,27 @@ export default function GlifMap() {
         const ux = (p.zpx - v.x) / (v.tile + GAP);
         const uy = (p.zpy - v.y) / (v.tile + GAP);
         v = { tile: next, x: p.zpx - ux * (next + GAP), y: p.zpy - uy * (next + GAP) };
-        if (map) map.easeTo({ zoom: map.getZoom() + Math.log2(eff), around: map.unproject([p.zpx, p.zpy]), duration: 0 });
+        // scale the backdrop by the same factor about the same point
+        iv = {
+          scale: iv.scale * eff,
+          x: p.zpx - (p.zpx - iv.x) * eff,
+          y: p.zpy - (p.zpy - iv.y) * eff,
+        };
       }
       p.zf = 1;
     }
 
     if (p.pdx || p.pdy) {
       v = { ...v, x: v.x + p.pdx, y: v.y + p.pdy };
-      if (map) map.panBy([-p.pdx, -p.pdy], { duration: 0 });
+      iv = { ...iv, x: iv.x + p.pdx, y: iv.y + p.pdy };
       p.pdx = 0;
       p.pdy = 0;
     }
 
     viewRef.current = v;
     setView(v);
+    imgRef.current = iv;
+    setImg(iv);
   }, []);
 
   const schedule = useCallback(() => {
@@ -122,41 +117,6 @@ export default function GlifMap() {
 
   useEffect(() => () => {
     if (pendingRef.current.raf) cancelAnimationFrame(pendingRef.current.raf);
-  }, []);
-
-  // --- NYC map backdrop (full screen, non-interactive) ---
-  useEffect(() => {
-    if (!mapDivRef.current) return;
-    const protocol = new Protocol();
-    maplibregl.addProtocol("pmtiles", protocol.tile);
-    const map = new maplibregl.Map({
-      container: mapDivRef.current,
-      interactive: false,
-      style: {
-        version: 8,
-        glyphs: "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
-        sources: {
-          protomaps: {
-            type: "vector",
-            url: PMTILES_URL,
-            attribution:
-              '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
-          },
-        },
-        layers: noLabelsWithCustomTheme("protomaps", MAP_THEME),
-      },
-      center: [-73.971, 40.753],
-      zoom: 11.2,
-      attributionControl: { compact: true },
-      fadeDuration: 0, // skip tile cross-fade re-renders
-      renderWorldCopies: false,
-    });
-    mapRef.current = map;
-    return () => {
-      mapRef.current = null;
-      map.remove();
-      maplibregl.removeProtocol("pmtiles");
-    };
   }, []);
 
   // --- load glifs, applying any locally-saved edits, sorted into collection bands ---
@@ -205,16 +165,28 @@ export default function GlifMap() {
     };
   }, []);
 
-  // Fit the table on load + resize. Toggling collections does NOT relayout —
-  // every glif stays in place so you can verify the seeded categories.
+  // Backdrop image sized to cover the viewport, centered.
+  const fitImg = useCallback((): ImgView => {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const scale = Math.max(vw / IMG_W, vh / IMG_H);
+    return { scale, x: (vw - IMG_W * scale) / 2, y: (vh - IMG_H * scale) / 2 };
+  }, []);
+
+  // Fit the table + backdrop on load + resize. Toggling collections does NOT
+  // relayout — every glif stays in place so you can verify the collections.
   useEffect(() => {
     if (glifs.length === 0) return;
     setCols(COLS);
     setView(fitTable());
-    const onResize = () => setView(fitTable());
+    setImg(fitImg());
+    const onResize = () => {
+      setView(fitTable());
+      setImg(fitImg());
+    };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [glifs, fitTable]);
+  }, [glifs, fitTable, fitImg]);
 
   // queue a zoom about a screen point (applied on the next frame by flush())
   const zoomAbout = useCallback(
@@ -329,7 +301,20 @@ export default function GlifMap() {
 
   return (
     <>
-      <div ref={mapDivRef} className="tg-backdrop" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className="tg-backdrop"
+        src={MAP_SRC}
+        alt=""
+        aria-hidden="true"
+        draggable={false}
+        style={{
+          width: IMG_W,
+          height: IMG_H,
+          transform: `translate(${img.x}px, ${img.y}px) scale(${img.scale})`,
+        }}
+      />
+      <div className="tg-sidebar" aria-hidden="true" />
       <div ref={stageRef} className="tg-stage">
         <div
           className="tg-grid"
