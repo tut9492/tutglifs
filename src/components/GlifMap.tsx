@@ -42,6 +42,11 @@ type Glif = {
 type View = { tile: number; x: number; y: number };
 
 const OVERRIDES_KEY = "tutglifs:overrides:v1";
+
+// The in-app collection editor is a maintainer/dev tool. v1 ships read-only:
+// it's enabled in local dev, and forks can turn it on with NEXT_PUBLIC_ENABLE_EDIT=true.
+const EDIT_ENABLED =
+  process.env.NODE_ENV !== "production" || process.env.NEXT_PUBLIC_ENABLE_EDIT === "true";
 const CAT_ORDER = new Map(CATEGORIES.map((c, i) => [c.id, i] as const));
 
 // Sort by collection (CATEGORIES order) then id, so each collection is a band.
@@ -383,12 +388,14 @@ export default function GlifMap() {
             clear
           </button>
         )}
-        <button className="tg-editbtn" onClick={() => setEditing(true)}>
-          ✎ edit collections
-        </button>
+        {EDIT_ENABLED && (
+          <button className="tg-editbtn" onClick={() => setEditing(true)}>
+            ✎ edit collections
+          </button>
+        )}
       </nav>
 
-      {editing && (
+      {EDIT_ENABLED && editing && (
         <EditCategories
           glifs={glifs}
           onReassign={reassign}

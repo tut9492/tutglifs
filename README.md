@@ -70,9 +70,18 @@ Tailwind CSS. No backend, no database, no auth — it's a static front-end.
 
 ## Contributing
 
+**v1 is read-only** — the live site ships a single canonical version. To
+contribute, **fork the repo** and open a pull request. The drag-and-drop collection
+editor runs in local dev (or with `NEXT_PUBLIC_ENABLE_EDIT=true`) so you can make
+your edits and **export an updated `glifs.json`** to submit.
+
 Fixes to the taxonomy, new tags, bug fixes, and UI improvements are all welcome.
 Start with [CONTRIBUTING.md](./CONTRIBUTING.md) — the most valuable contribution is
 correcting/extending the collections in `public/glifs.json`.
+
+_Roadmap: v2 opens up true collaboration — contributors co-create the site with
+the help of their own [AGNT](https://my.agnt.social) agents proposing changes
+straight into GitHub._
 
 ## Security
 

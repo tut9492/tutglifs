@@ -23,7 +23,10 @@ Every glif is assigned a **primary collection** in
 [`public/glifs.json`](./public/glifs.json). That seed was a single human's
 first-pass read of abstract art — plenty of calls are debatable or wrong.
 
-### Easiest: the in-app editor
+### Easiest: the in-app editor (local)
+
+The live site is **read-only** in v1. The drag-and-drop editor runs in **local
+dev** (`npm run dev`) — or in your fork if you set `NEXT_PUBLIC_ENABLE_EDIT=true`.
 
 Click **✎ edit collections** in the sidebar. The glifs break into labeled,
 spaced sections — one per collection. **Drag any glif into another section** to
