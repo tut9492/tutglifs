@@ -13,8 +13,7 @@ Requirements: **Node 20+**.
 
 ```bash
 npm install
-npm run setup     # fetches the glifs + builds thumbnails (one time, ~1 min)
-npm run dev
+npm run dev       # assets ship in the repo — no setup step needed
 ```
 
 ## The most useful contribution: fix the collections

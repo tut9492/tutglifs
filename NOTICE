@@ -7,10 +7,13 @@ endorsed by, or connected to GLiFS, Efdot Studio, or Transient Labs.
 GLiFS artwork
 -------------
 The 300 GLiFS images are © Efdot Studio, released as an NFT collection via
-Transient Labs (https://www.glifs.art/). They are the property of their creator
-and are NOT redistributed in this repository. The `npm run setup` script fetches
-them at build time from the official public sources for personal/local use only.
-If you are the rights holder and want this changed, open an issue and we'll act.
+Transient Labs (https://www.glifs.art/). They are the property of their creator.
+They are included in this repository solely to power this unofficial,
+non-commercial community guide; all rights remain with Efdot Studio. This project
+claims no ownership of the artwork. If you are the rights holder and would like
+any of it removed or changed, open an issue (or contact @tuteth_) and we'll act
+promptly. (`npm run setup` can also (re)build the local image set from the
+official public sources.)
 
 Map data & basemap
 ------------------

@@ -26,7 +26,6 @@
   "scripts": {
     "setup": "node scripts/setup.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/setup.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

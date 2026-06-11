@@ -11,8 +11,8 @@ community can start to read and build the glif "language."
 > site never asks for a wallet, a signature, or a seed phrase, and the codebase
 > ships no wallet libraries.
 
-The GLiFS artwork is © Efdot Studio / Transient Labs and is **not** redistributed
-here — `npm run setup` fetches it from the official sources. See [NOTICE](./NOTICE).
+The GLiFS artwork is © Efdot Studio / Transient Labs, included here only to power
+this unofficial community guide — all rights remain with Efdot. See [NOTICE](./NOTICE).
 
 ---
 
@@ -35,18 +35,18 @@ Requirements: **Node 20+**.
 
 ```bash
 npm install
-npm run setup     # fetches the 300 glifs + logo, builds thumbnails (one time)
 npm run dev       # http://localhost:3000
 ```
 
-`npm run setup` writes git-ignored assets into `public/glifs/`,
-`public/glifs-static/`, and `public/glifs-logo.gif`. It is safe to re-run.
-
 ```bash
-npm run build     # production build (runs setup automatically via prebuild)
+npm run build     # production build
 npm start         # serve the production build
 npm run lint
 ```
+
+The glif images and basemap ship in the repo, so no extra steps are needed.
+`npm run setup` is optional — it (re)builds the local image set from the official
+sources if you ever need to regenerate it.
 
 ## How it's built
 
