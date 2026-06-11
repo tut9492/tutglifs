@@ -1,14 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, type CSSProperties } from "react";
 import maplibregl from "maplibre-gl";
 import { Protocol } from "pmtiles";
-import { noLabels } from "protomaps-themes-base";
+import { namedTheme, noLabelsWithCustomTheme } from "protomaps-themes-base";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { CATEGORIES } from "@/data/categories";
 
-const THEME = "white";
 const PMTILES_URL = "pmtiles:///map/nyc.pmtiles";
+
+// Minimal white basemap, but with darker (toward-black) road lines for contrast.
+const MAP_THEME = {
+  ...namedTheme("white"),
+  other: "#cfcfcf",
+  minor_service: "#cfcfcf",
+  minor_a: "#9a9a9a",
+  minor_b: "#b4b4b4",
+  link: "#7f7f7f",
+  major: "#6a6a6a",
+  highway: "#3f3f3f",
+  railway: "#9a9a9a",
+  boundaries: "#6a6a6a",
+  buildings: "#e4e4e4",
+};
 
 const COLS = 20;
 const ROWS = 15; // 20 x 15 = 300
@@ -55,7 +69,7 @@ export default function GlifMap() {
               '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
           },
         },
-        layers: noLabels("protomaps", THEME),
+        layers: noLabelsWithCustomTheme("protomaps", MAP_THEME),
       },
       center: [-73.971, 40.753],
       zoom: 11.2,
@@ -94,7 +108,8 @@ export default function GlifMap() {
     const vh = window.innerHeight;
     const tile = Math.max(MIN_TILE, (vw - (COLS - 1) * GAP) / COLS);
     const gridH = ROWS * tile + (ROWS - 1) * GAP;
-    return { tile, x: 0, y: gridH < vh ? (vh - gridH) / 2 : 56 };
+    // Full-bleed: span the width and center vertically so it bleeds off all edges.
+    return { tile, x: 0, y: Math.round((vh - gridH) / 2) };
   }, []);
 
   // Fit the table on load + resize. Toggling collections does NOT relayout —
@@ -234,11 +249,10 @@ export default function GlifMap() {
             <button
               key={c.id}
               className={`tg-chip${on ? " is-on" : ""}`}
-              style={on ? { borderColor: c.color, background: c.color } : undefined}
+              style={{ ["--c"]: c.color } as CSSProperties}
               onClick={() => toggle(c.id)}
-              title={`${c.label} → ${c.hood}`}
+              title={c.label}
             >
-              <span className="tg-dot" style={{ background: c.color }} />
               {c.label}
               <span className="tg-count">{counts[c.id] ?? ""}</span>
             </button>
