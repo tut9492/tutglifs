@@ -46,3 +46,8 @@ next-env.d.ts
 # machine-specific dev screenshot helpers
 scripts/shot.mjs
 scripts/shot2.mjs
+
+# Efdot's GLiFS artwork — NOT redistributed here; fetched via `npm run setup`
+/public/glifs/
+/public/glifs-static/
+/public/glifs-logo.gif

@@ -1,0 +1,30 @@
+name: "🐛 Bug report"
+description: Something doesn't work as expected.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click / zoom ...
+        3. See ...
+  - type: input
+    id: env
+    attributes:
+      label: Browser / OS / device
+      placeholder: "Chrome 140, macOS, desktop"
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (if any)
+      render: shell

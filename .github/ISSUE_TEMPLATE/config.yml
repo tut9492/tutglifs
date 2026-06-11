@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/tut9492/tutglifs/security/advisories/new
+    about: Please report security issues privately, never as a public issue. See SECURITY.md.
+  - name: 💬 GLiFS (official)
+    url: https://www.glifs.art/
+    about: This is an unofficial guide. For the collection itself, visit glifs.art.

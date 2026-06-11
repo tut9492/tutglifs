@@ -1,0 +1,37 @@
+tutglifs — third-party notices & attributions
+=============================================
+
+tutglifs is an unofficial, community-built guide. It is not affiliated with,
+endorsed by, or connected to GLiFS, Efdot Studio, or Transient Labs.
+
+GLiFS artwork
+-------------
+The 300 GLiFS images are © Efdot Studio, released as an NFT collection via
+Transient Labs (https://www.glifs.art/). They are the property of their creator
+and are NOT redistributed in this repository. The `npm run setup` script fetches
+them at build time from the official public sources for personal/local use only.
+If you are the rights holder and want this changed, open an issue and we'll act.
+
+Map data & basemap
+------------------
+- Map data © OpenStreetMap contributors, available under the Open Database
+  License (ODbL): https://www.openstreetmap.org/copyright
+- Basemap tiles built with Protomaps (https://protomaps.com) and the
+  protomaps-themes-base style. Natural Earth data is in the public domain.
+- The committed `public/map/nyc.pmtiles` is an extract of the above open data.
+
+Fonts (Google Fonts, SIL Open Font License 1.1)
+-----------------------------------------------
+- Fredoka — used for the collection pills
+- Orbitron — used for "guide" and labels
+- Permanent Marker — used elsewhere in the UI
+- Geist / Geist Mono — bundled by create-next-app
+
+tut logo
+--------
+The "tut" mark (public/tut-logo.png) is © tut (@tuteth_).
+
+Libraries
+---------
+Next.js, React, MapLibre GL JS, pmtiles, protomaps-themes-base, sharp, Tailwind
+CSS — each under its own open-source license (see node_modules/<pkg>/LICENSE).

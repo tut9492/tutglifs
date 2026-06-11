@@ -1,0 +1,40 @@
+name: "🏷️ Collection correction"
+description: A glif is in the wrong collection (or you'd add a tag).
+title: "[taxonomy] "
+labels: ["taxonomy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help tune the seed taxonomy. You can also just open a PR editing
+        `public/glifs.json` directly — see CONTRIBUTING.md.
+  - type: input
+    id: ids
+    attributes:
+      label: Glif #id(s)
+      description: The number shown when you hover a glif. Comma-separate multiple.
+      placeholder: "42, 117"
+    validations:
+      required: true
+  - type: dropdown
+    id: collection
+    attributes:
+      label: Correct primary collection
+      options:
+        - faces
+        - figures
+        - hands
+        - animals
+        - nature
+        - circles
+        - items
+        - symbols
+        - letters
+        - (propose a new one — explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Why? Any tags to add? Anything else?

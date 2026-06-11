@@ -2,8 +2,31 @@
   "name": "tutglifs",
   "version": "0.1.0",
   "private": true,
+  "description": "GLiFS guide — an open-source, zoomable map + dictionary of the 300 GLiFS by Efdot, organized into collections. Not affiliated with GLiFS/Efdot. No wallet connect, ever.",
+  "keywords": [
+    "glifs",
+    "efdot",
+    "nft",
+    "maplibre",
+    "protomaps",
+    "nextjs",
+    "open-source",
+    "dictionary"
+  ],
+  "license": "MIT",
+  "author": "tut (@tuteth_)",
+  "homepage": "https://github.com/tut9492/tutglifs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tut9492/tutglifs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tut9492/tutglifs/issues"
+  },
   "scripts": {
+    "setup": "node scripts/setup.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/setup.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -23,6 +46,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "sharp": "0.35.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
