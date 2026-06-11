@@ -33,9 +33,9 @@ const future = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "glif dictionary — built by tut",
+  title: "glifsguide — a GLiFS guide by Efdot fans",
   description:
-    "An open-source dictionary of the GLiFS by Efdot. See all 300, sort them by collection, and build the language.",
+    "glifsguide — an open-source, zoomable map + dictionary of the 300 GLiFS by Efdot, sorted into collections. Unofficial. No wallet connect, ever.",
 };
 
 export default function RootLayout({
