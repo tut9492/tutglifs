@@ -47,16 +47,23 @@ body {
   display: grid;
   will-change: transform;
 }
-.tg-tile {
-  display: block;
+.tg-cell {
+  position: relative;
 }
-.tg-tile img {
+.tg-cell img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
+  transition: transform 0.12s ease;
+}
+.tg-cell:hover {
+  z-index: 50;
+}
+.tg-cell:hover img {
+  transform: scale(2);
 }
 
 /* Zoom buttons */

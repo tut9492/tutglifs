@@ -13,7 +13,7 @@ const PMTILES_URL = "pmtiles:///map/nyc.pmtiles";
 const COLS = 20;
 const ROWS = 15; // 20 x 15 = 300
 const GAP = 3; // px between glifs — constant at every zoom
-const MIN_TILE_FLOOR = 18;
+const MIN_TILE = 14;
 const MAX_TILE = 360;
 
 type Glif = {
@@ -32,10 +32,11 @@ export default function GlifMap() {
   const [glifs, setGlifs] = useState<Glif[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [cols, setCols] = useState(COLS);
   const [view, setView] = useState<View>({ tile: 40, x: 0, y: 0 });
-  const minTileRef = useRef(20);
+  const [hover, setHover] = useState<number | null>(null);
 
-  // --- NYC map backdrop (non-interactive) ---
+  // --- NYC map backdrop (full screen, non-interactive) ---
   useEffect(() => {
     if (!mapDivRef.current) return;
     const protocol = new Protocol();
@@ -81,41 +82,59 @@ export default function GlifMap() {
       });
   }, []);
 
-  // fit-to-viewport tile size = max zoom out
-  const computeMinTile = useCallback(() => {
+  // Fit the active layout (full table, or the bunched selection) to the screen.
+  const fitLayout = useCallback((sel: Set<string>): { cols: number; view: View } => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const fitW = (vw - 80 - (COLS - 1) * GAP) / COLS;
-    const fitH = (vh - 120 - (ROWS - 1) * GAP) / ROWS;
-    return Math.max(MIN_TILE_FLOOR, Math.floor(Math.min(fitW, fitH)));
-  }, []);
 
-  const centeredView = useCallback((tile: number): View => {
-    const tableW = COLS * tile + (COLS - 1) * GAP;
-    const tableH = ROWS * tile + (ROWS - 1) * GAP;
+    if (sel.size === 0) {
+      // Full-bleed table: 20 columns span the entire screen width.
+      const tile = Math.max(MIN_TILE, (vw - (COLS - 1) * GAP) / COLS);
+      const gridH = ROWS * tile + (ROWS - 1) * GAP;
+      return { cols: COLS, view: { tile, x: 0, y: gridH < vh ? (vh - gridH) / 2 : 56 } };
+    }
+
+    // Bunch: matching glifs gather into a compact, centered clump.
+    const n = glifs.filter((g) => g.categories[0] && sel.has(g.categories[0])).length || 1;
+    const bcols = Math.max(1, Math.ceil(Math.sqrt(n * 1.3)));
+    const brows = Math.ceil(n / bcols);
+    const padX = 60;
+    const padY = 150;
+    const tile = Math.max(
+      MIN_TILE,
+      Math.min(
+        MAX_TILE,
+        (vw - padX * 2 - (bcols - 1) * GAP) / bcols,
+        (vh - padY * 2 - (brows - 1) * GAP) / brows
+      )
+    );
+    const gridW = bcols * tile + (bcols - 1) * GAP;
+    const gridH = brows * tile + (brows - 1) * GAP;
     return {
-      tile,
-      x: Math.round((window.innerWidth - tableW) / 2),
-      y: Math.round((window.innerHeight - tableH) / 2),
+      cols: bcols,
+      view: { tile, x: (vw - gridW) / 2, y: Math.max(96, (vh - gridH) / 2) },
     };
-  }, []);
+  }, [glifs]);
 
-  // init / resize -> max-zoom-out, centered
+  // Re-fit whenever the selection (or data / window) changes.
   useEffect(() => {
-    const init = () => {
-      const min = computeMinTile();
-      minTileRef.current = min;
-      setView(centeredView(min));
+    if (glifs.length === 0) return;
+    const { cols: c, view: v } = fitLayout(selected);
+    setCols(c);
+    setView(v);
+    const onResize = () => {
+      const r = fitLayout(selected);
+      setCols(r.cols);
+      setView(r.view);
     };
-    init();
-    window.addEventListener("resize", init);
-    return () => window.removeEventListener("resize", init);
-  }, [computeMinTile, centeredView]);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [selected, glifs, fitLayout]);
 
   // zoom about a screen point, keeping that point stable; gap stays constant
   const zoomAbout = useCallback((factor: number, px: number, py: number) => {
     setView((v) => {
-      const next = Math.min(MAX_TILE, Math.max(minTileRef.current, v.tile * factor));
+      const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * factor));
       if (next === v.tile) return v;
       const ux = (px - v.x) / (v.tile + GAP);
       const uy = (py - v.y) / (v.tile + GAP);
@@ -123,7 +142,6 @@ export default function GlifMap() {
     });
   }, []);
 
-  // wheel zoom anchored at cursor
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return;
@@ -140,17 +158,22 @@ export default function GlifMap() {
     const stage = stageRef.current;
     if (!stage) return;
     let dragging = false;
+    let moved = false;
     let last = { x: 0, y: 0 };
     const down = (e: PointerEvent) => {
       dragging = true;
+      moved = false;
       last = { x: e.clientX, y: e.clientY };
       stage.setPointerCapture(e.pointerId);
-      stage.style.cursor = "grabbing";
     };
     const move = (e: PointerEvent) => {
       if (!dragging) return;
       const dx = e.clientX - last.x;
       const dy = e.clientY - last.y;
+      if (Math.abs(dx) + Math.abs(dy) > 2) {
+        moved = true;
+        stage.style.cursor = "grabbing";
+      }
       last = { x: e.clientX, y: e.clientY };
       setView((v) => ({ ...v, x: v.x + dx, y: v.y + dy }));
     };
@@ -158,16 +181,17 @@ export default function GlifMap() {
       dragging = false;
       try { stage.releasePointerCapture(e.pointerId); } catch {}
       stage.style.cursor = "grab";
+      void moved;
     };
     stage.addEventListener("pointerdown", down);
     stage.addEventListener("pointermove", move);
     stage.addEventListener("pointerup", up);
-    stage.addEventListener("pointerleave", up);
+    stage.addEventListener("pointercancel", up);
     return () => {
       stage.removeEventListener("pointerdown", down);
       stage.removeEventListener("pointermove", move);
       stage.removeEventListener("pointerup", up);
-      stage.removeEventListener("pointerleave", up);
+      stage.removeEventListener("pointercancel", up);
     };
   }, []);
 
@@ -188,20 +212,29 @@ export default function GlifMap() {
           className="tg-grid"
           style={{
             transform: `translate(${view.x}px, ${view.y}px)`,
-            gridTemplateColumns: `repeat(${COLS}, ${view.tile}px)`,
+            gridTemplateColumns: `repeat(${cols}, ${view.tile}px)`,
             gap: `${GAP}px`,
           }}
         >
           {glifs.map((g) => {
-            const dim = active && !(g.categories[0] && selected.has(g.categories[0]));
+            const inSel = !!g.categories[0] && selected.has(g.categories[0]);
+            const hidden = active && !inSel;
             return (
               <div
                 key={g.id}
-                className="tg-tile"
-                style={{ width: view.tile, height: view.tile, opacity: dim ? 0.07 : 1 }}
+                className="tg-cell"
+                style={{ width: view.tile, height: view.tile, display: hidden ? "none" : "block" }}
                 title={`#${g.id}${g.categories[0] ? " · " + g.categories[0] : ""}`}
+                onMouseEnter={() => setHover(g.id)}
+                onMouseLeave={() => setHover((h) => (h === g.id ? null : h))}
               >
-                <img src={g.src} alt={`glif #${g.id}`} loading="lazy" decoding="async" draggable={false} />
+                <img
+                  src={hover === g.id ? g.gif : g.src}
+                  alt={`glif #${g.id}`}
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                />
               </div>
             );
           })}
@@ -217,7 +250,7 @@ export default function GlifMap() {
         </button>
       </div>
 
-      <nav className="tg-cats" aria-label="glif categories">
+      <nav className="tg-cats" aria-label="glif collections">
         {CATEGORIES.map((c) => {
           const on = selected.has(c.id);
           return (
