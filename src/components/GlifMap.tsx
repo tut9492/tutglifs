@@ -42,13 +42,27 @@ type View = { tile: number; x: number; y: number };
 
 export default function GlifMap() {
   const mapDivRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<maplibregl.Map | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const [glifs, setGlifs] = useState<Glif[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [cols, setCols] = useState(COLS);
   const [view, setView] = useState<View>({ tile: 40, x: 0, y: 0 });
+  const viewRef = useRef(view);
+  viewRef.current = view;
   const [hover, setHover] = useState<number | null>(null);
+
+  // Drive the NYC map backdrop from the same gesture so the city moves WITH the
+  // glif grid (coupled navigation). panBy by the same pixels; zoom by log2(factor).
+  const mapPanBy = useCallback((dx: number, dy: number) => {
+    mapRef.current?.panBy([-dx, -dy], { duration: 0 });
+  }, []);
+  const mapZoomBy = useCallback((factor: number, px: number, py: number) => {
+    const map = mapRef.current;
+    if (!map || factor === 1) return;
+    map.easeTo({ zoom: map.getZoom() + Math.log2(factor), around: map.unproject([px, py]), duration: 0 });
+  }, []);
 
   // --- NYC map backdrop (full screen, non-interactive) ---
   useEffect(() => {
@@ -75,7 +89,9 @@ export default function GlifMap() {
       zoom: 11.2,
       attributionControl: { compact: true },
     });
+    mapRef.current = map;
     return () => {
+      mapRef.current = null;
       map.remove();
       maplibregl.removeProtocol("pmtiles");
     };
@@ -133,16 +149,23 @@ export default function GlifMap() {
     return () => window.removeEventListener("resize", onResize);
   }, [glifs, fitTable]);
 
-  // zoom about a screen point, keeping that point stable; gap stays constant
-  const zoomAbout = useCallback((factor: number, px: number, py: number) => {
-    setView((v) => {
+  // zoom about a screen point, keeping that point stable; gap stays constant.
+  // The map zooms by the same effective factor about the same point (coupled).
+  const zoomAbout = useCallback(
+    (factor: number, px: number, py: number) => {
+      const v = viewRef.current;
       const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * factor));
-      if (next === v.tile) return v;
+      if (next === v.tile) return;
+      const eff = next / v.tile;
       const ux = (px - v.x) / (v.tile + GAP);
       const uy = (py - v.y) / (v.tile + GAP);
-      return { tile: next, x: px - ux * (next + GAP), y: py - uy * (next + GAP) };
-    });
-  }, []);
+      const nv = { tile: next, x: px - ux * (next + GAP), y: py - uy * (next + GAP) };
+      viewRef.current = nv;
+      setView(nv);
+      mapZoomBy(eff, px, py);
+    },
+    [mapZoomBy]
+  );
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -177,7 +200,11 @@ export default function GlifMap() {
         stage.style.cursor = "grabbing";
       }
       last = { x: e.clientX, y: e.clientY };
-      setView((v) => ({ ...v, x: v.x + dx, y: v.y + dy }));
+      const v = viewRef.current;
+      const nv = { ...v, x: v.x + dx, y: v.y + dy };
+      viewRef.current = nv;
+      setView(nv);
+      mapPanBy(dx, dy);
     };
     const up = (e: PointerEvent) => {
       dragging = false;
@@ -195,7 +222,7 @@ export default function GlifMap() {
       stage.removeEventListener("pointerup", up);
       stage.removeEventListener("pointercancel", up);
     };
-  }, []);
+  }, [mapPanBy]);
 
   const toggle = (id: string) =>
     setSelected((prev) => {
