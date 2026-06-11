@@ -53,15 +53,48 @@ export default function GlifMap() {
   viewRef.current = view;
   const [hover, setHover] = useState<number | null>(null);
 
-  // Drive the NYC map backdrop from the same gesture so the city moves WITH the
-  // glif grid (coupled navigation). panBy by the same pixels; zoom by log2(factor).
-  const mapPanBy = useCallback((dx: number, dy: number) => {
-    mapRef.current?.panBy([-dx, -dy], { duration: 0 });
-  }, []);
-  const mapZoomBy = useCallback((factor: number, px: number, py: number) => {
+  // Gestures accumulate into `pending` and are applied to BOTH the grid and the
+  // coupled map ONCE per animation frame. This stops the live vector map (and the
+  // 300-tile grid) from re-rendering on every wheel/drag event — the cause of the
+  // zoom-out lag.
+  const pendingRef = useRef({ zf: 1, zpx: 0, zpy: 0, pdx: 0, pdy: 0, raf: 0 });
+
+  const flush = useCallback(() => {
+    const p = pendingRef.current;
+    p.raf = 0;
+    let v = viewRef.current;
     const map = mapRef.current;
-    if (!map || factor === 1) return;
-    map.easeTo({ zoom: map.getZoom() + Math.log2(factor), around: map.unproject([px, py]), duration: 0 });
+
+    if (p.zf !== 1) {
+      const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * p.zf));
+      if (next !== v.tile) {
+        const eff = next / v.tile;
+        const ux = (p.zpx - v.x) / (v.tile + GAP);
+        const uy = (p.zpy - v.y) / (v.tile + GAP);
+        v = { tile: next, x: p.zpx - ux * (next + GAP), y: p.zpy - uy * (next + GAP) };
+        if (map) map.easeTo({ zoom: map.getZoom() + Math.log2(eff), around: map.unproject([p.zpx, p.zpy]), duration: 0 });
+      }
+      p.zf = 1;
+    }
+
+    if (p.pdx || p.pdy) {
+      v = { ...v, x: v.x + p.pdx, y: v.y + p.pdy };
+      if (map) map.panBy([-p.pdx, -p.pdy], { duration: 0 });
+      p.pdx = 0;
+      p.pdy = 0;
+    }
+
+    viewRef.current = v;
+    setView(v);
+  }, []);
+
+  const schedule = useCallback(() => {
+    const p = pendingRef.current;
+    if (!p.raf) p.raf = requestAnimationFrame(flush);
+  }, [flush]);
+
+  useEffect(() => () => {
+    if (pendingRef.current.raf) cancelAnimationFrame(pendingRef.current.raf);
   }, []);
 
   // --- NYC map backdrop (full screen, non-interactive) ---
@@ -88,6 +121,8 @@ export default function GlifMap() {
       center: [-73.971, 40.753],
       zoom: 11.2,
       attributionControl: { compact: true },
+      fadeDuration: 0, // skip tile cross-fade re-renders
+      renderWorldCopies: false,
     });
     mapRef.current = map;
     return () => {
@@ -149,22 +184,16 @@ export default function GlifMap() {
     return () => window.removeEventListener("resize", onResize);
   }, [glifs, fitTable]);
 
-  // zoom about a screen point, keeping that point stable; gap stays constant.
-  // The map zooms by the same effective factor about the same point (coupled).
+  // queue a zoom about a screen point (applied on the next frame by flush())
   const zoomAbout = useCallback(
     (factor: number, px: number, py: number) => {
-      const v = viewRef.current;
-      const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * factor));
-      if (next === v.tile) return;
-      const eff = next / v.tile;
-      const ux = (px - v.x) / (v.tile + GAP);
-      const uy = (py - v.y) / (v.tile + GAP);
-      const nv = { tile: next, x: px - ux * (next + GAP), y: py - uy * (next + GAP) };
-      viewRef.current = nv;
-      setView(nv);
-      mapZoomBy(eff, px, py);
+      const p = pendingRef.current;
+      p.zf *= factor;
+      p.zpx = px;
+      p.zpy = py;
+      schedule();
     },
-    [mapZoomBy]
+    [schedule]
   );
 
   useEffect(() => {
@@ -200,11 +229,10 @@ export default function GlifMap() {
         stage.style.cursor = "grabbing";
       }
       last = { x: e.clientX, y: e.clientY };
-      const v = viewRef.current;
-      const nv = { ...v, x: v.x + dx, y: v.y + dy };
-      viewRef.current = nv;
-      setView(nv);
-      mapPanBy(dx, dy);
+      const p = pendingRef.current;
+      p.pdx += dx;
+      p.pdy += dy;
+      schedule();
     };
     const up = (e: PointerEvent) => {
       dragging = false;
@@ -222,7 +250,7 @@ export default function GlifMap() {
       stage.removeEventListener("pointerup", up);
       stage.removeEventListener("pointercancel", up);
     };
-  }, [mapPanBy]);
+  }, [schedule]);
 
   const toggle = (id: string) =>
     setSelected((prev) => {
