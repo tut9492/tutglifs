@@ -67,11 +67,17 @@ export default function GlifMap() {
     };
   }, []);
 
-  // --- load glifs ---
+  // --- load glifs, sorted by category so each collection is a contiguous block ---
   useEffect(() => {
+    const order = new Map(CATEGORIES.map((c, i) => [c.id, i]));
+    const rank = (g: Glif) => {
+      const p = g.categories[0];
+      return p && order.has(p) ? (order.get(p) as number) : 999;
+    };
     fetch("/glifs.json")
       .then((r) => r.json())
       .then((data: Glif[]) => {
+        data.sort((a, b) => rank(a) - rank(b) || a.id - b.id);
         setGlifs(data);
         const c: Record<string, number> = {};
         for (const g of data) {
