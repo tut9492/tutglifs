@@ -13,8 +13,8 @@ const IMG_H = 1950;
 const COLS = 20;
 const ROWS = 15; // 20 x 15 = 300
 const GAP = 3; // px between glifs — constant at every zoom
-const MIN_TILE = 14;
-const MAX_TILE = 360;
+const MIN_TILE = 28; // max zoom OUT
+const MAX_TILE = 200; // max zoom IN
 
 type Glif = {
   id: number;
@@ -25,6 +25,25 @@ type Glif = {
 };
 
 type View = { tile: number; x: number; y: number };
+type ImgView = { scale: number; x: number; y: number };
+
+// Smallest image scale that still fully covers the viewport (with a little margin).
+function coverScale(vw: number, vh: number): number {
+  return Math.max(vw / IMG_W, vh / IMG_H) * 1.06;
+}
+
+// Keep the backdrop always covering the viewport: floor its scale at cover and
+// clamp its offset so an edge can never show (no white border on zoom-out).
+function clampImg(iv: ImgView): ImgView {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const scale = Math.max(coverScale(vw, vh), iv.scale);
+  const w = IMG_W * scale;
+  const h = IMG_H * scale;
+  const x = Math.max(vw - w, Math.min(0, iv.x));
+  const y = Math.max(vh - h, Math.min(0, iv.y));
+  return { scale, x, y };
+}
 
 const OVERRIDES_KEY = "tutglifs:overrides:v1";
 
@@ -50,8 +69,6 @@ function loadOverrides(): Record<number, string> {
     return {};
   }
 }
-
-type ImgView = { scale: number; x: number; y: number };
 
 export default function GlifMap() {
   const stageRef = useRef<HTMLDivElement>(null);
@@ -106,6 +123,7 @@ export default function GlifMap() {
 
     viewRef.current = v;
     setView(v);
+    iv = clampImg(iv);
     imgRef.current = iv;
     setImg(iv);
   }, []);
@@ -169,8 +187,8 @@ export default function GlifMap() {
   const fitImg = useCallback((): ImgView => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const scale = Math.max(vw / IMG_W, vh / IMG_H);
-    return { scale, x: (vw - IMG_W * scale) / 2, y: (vh - IMG_H * scale) / 2 };
+    const scale = coverScale(vw, vh);
+    return clampImg({ scale, x: (vw - IMG_W * scale) / 2, y: (vh - IMG_H * scale) / 2 });
   }, []);
 
   // Fit the table + backdrop on load + resize. Toggling collections does NOT
