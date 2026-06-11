@@ -6,6 +6,7 @@ import { Protocol } from "pmtiles";
 import { namedTheme, noLabelsWithCustomTheme } from "protomaps-themes-base";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { CATEGORIES } from "@/data/categories";
+import EditCategories from "@/components/EditCategories";
 
 const PMTILES_URL = "pmtiles:///map/nyc.pmtiles";
 
@@ -40,6 +41,26 @@ type Glif = {
 
 type View = { tile: number; x: number; y: number };
 
+const OVERRIDES_KEY = "tutglifs:overrides:v1";
+const CAT_ORDER = new Map(CATEGORIES.map((c, i) => [c.id, i] as const));
+
+// Sort by collection (CATEGORIES order) then id, so each collection is a band.
+function sortGlifs(arr: Glif[]): Glif[] {
+  const rank = (g: Glif) => {
+    const p = g.categories[0];
+    return p && CAT_ORDER.has(p) ? (CAT_ORDER.get(p) as number) : 999;
+  };
+  return [...arr].sort((a, b) => rank(a) - rank(b) || a.id - b.id);
+}
+
+function loadOverrides(): Record<number, string> {
+  try {
+    return JSON.parse(localStorage.getItem(OVERRIDES_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
 export default function GlifMap() {
   const mapDivRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
@@ -52,6 +73,7 @@ export default function GlifMap() {
   const viewRef = useRef(view);
   viewRef.current = view;
   const [hover, setHover] = useState<number | null>(null);
+  const [editing, setEditing] = useState(false);
 
   // Gestures accumulate into `pending` and are applied to BOTH the grid and the
   // coupled map ONCE per animation frame. This stops the live vector map (and the
@@ -132,26 +154,28 @@ export default function GlifMap() {
     };
   }, []);
 
-  // --- load glifs, sorted by category so each collection is a contiguous block ---
+  // --- load glifs, applying any locally-saved edits, sorted into collection bands ---
   useEffect(() => {
-    const order = new Map(CATEGORIES.map((c, i) => [c.id, i]));
-    const rank = (g: Glif) => {
-      const p = g.categories[0];
-      return p && order.has(p) ? (order.get(p) as number) : 999;
-    };
     fetch("/glifs.json")
       .then((r) => r.json())
       .then((data: Glif[]) => {
-        data.sort((a, b) => rank(a) - rank(b) || a.id - b.id);
-        setGlifs(data);
-        const c: Record<string, number> = {};
+        const overrides = loadOverrides();
         for (const g of data) {
-          const p = g.categories[0];
-          if (p) c[p] = (c[p] || 0) + 1;
+          if (overrides[g.id]) g.categories = [overrides[g.id]];
         }
-        setCounts(c);
+        setGlifs(sortGlifs(data));
       });
   }, []);
+
+  // counts derived from current glifs (so edits update the pills live)
+  useEffect(() => {
+    const c: Record<string, number> = {};
+    for (const g of glifs) {
+      const p = g.categories[0];
+      if (p) c[p] = (c[p] || 0) + 1;
+    }
+    setCounts(c);
+  }, [glifs]);
 
   // Default view: whole table visible (contained), centered in the space to the
   // right of the left sidebar, with the map showing around it.
@@ -259,6 +283,37 @@ export default function GlifMap() {
       return n;
     });
 
+  // --- edit collections (drag & drop reassignment) ---
+  const reassign = useCallback((id: number, category: string) => {
+    setGlifs((prev) => {
+      const next = prev.map((g) => (g.id === id ? { ...g, categories: [category] } : g));
+      try {
+        const o = loadOverrides();
+        o[id] = category;
+        localStorage.setItem(OVERRIDES_KEY, JSON.stringify(o));
+      } catch {}
+      return sortGlifs(next);
+    });
+  }, []);
+
+  const exportJson = useCallback(() => {
+    const ordered = [...glifs].sort((a, b) => a.id - b.id);
+    const blob = new Blob([JSON.stringify(ordered, null, 2) + "\n"], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "glifs.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [glifs]);
+
+  const resetEdits = useCallback(() => {
+    try { localStorage.removeItem(OVERRIDES_KEY); } catch {}
+    fetch("/glifs.json")
+      .then((r) => r.json())
+      .then((data: Glif[]) => setGlifs(sortGlifs(data)));
+  }, []);
+
   const active = selected.size > 0;
 
   return (
@@ -328,7 +383,20 @@ export default function GlifMap() {
             clear
           </button>
         )}
+        <button className="tg-editbtn" onClick={() => setEditing(true)}>
+          ✎ edit collections
+        </button>
       </nav>
+
+      {editing && (
+        <EditCategories
+          glifs={glifs}
+          onReassign={reassign}
+          onExport={exportJson}
+          onReset={resetEdits}
+          onClose={() => setEditing(false)}
+        />
+      )}
     </>
   );
 }

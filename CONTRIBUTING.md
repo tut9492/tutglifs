@@ -23,7 +23,17 @@ Every glif is assigned a **primary collection** in
 [`public/glifs.json`](./public/glifs.json). That seed was a single human's
 first-pass read of abstract art — plenty of calls are debatable or wrong.
 
-To verify and fix:
+### Easiest: the in-app editor
+
+Click **✎ edit collections** in the sidebar. The glifs break into labeled,
+spaced sections — one per collection. **Drag any glif into another section** to
+reassign it; changes save to your browser automatically. When you're happy, hit
+**export glifs.json** to download the updated file and open a PR with it (or paste
+the diff into a collection-correction issue). **reset** reverts to the seed.
+
+### Or edit the file directly
+
+To verify and fix by hand:
 
 1. Run the app and toggle a collection (e.g. **Faces**). The matching glifs stay
    solid; everything else fades. Because the table is sorted by collection, each
