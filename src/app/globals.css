@@ -16,12 +16,12 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background: #F9F8F5; /* GLiFS canvas — matches the glif-tile background */
+  background: #CCCCCC; /* canvas — gives the cream glif tiles contrast */
   color: #111;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Left side-panel surface — a clean vertical break between nav and the glifs */
+/* Left side-panel surface — gives the nav contrast against the cream canvas */
 .tg-sidebar {
   position: fixed;
   left: 0;
