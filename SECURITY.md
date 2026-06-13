@@ -14,8 +14,8 @@ Hardening in place:
   `Permissions-Policy`, HSTS) — see [`next.config.ts`](./next.config.ts).
 - No secrets in the repo, no `.env` required, no `eval`, no
   `dangerouslySetInnerHTML`.
-- **Zero external requests at runtime.** All assets (glif images, the map
-  backdrop, fonts) are served same-origin; CSP `connect-src`/`font-src` are
+- **Zero external requests at runtime.** All assets (glif images, fonts) are
+  served same-origin; CSP `connect-src`/`font-src` are
   locked to `'self'`. The only outbound fetches happen during the optional
   `npm run setup` (developer machine, official GLiFS image sources).
 
@@ -40,9 +40,9 @@ We'll acknowledge as soon as we can, keep you updated, and credit you on fix
 
 In scope: this repository's source, the built site, the asset-fetch script.
 
-Out of scope: third-party services we merely link to or fetch open assets from
-(OpenStreetMap, Protomaps, Transient Labs, glifs.art, x.com) — report issues in
-those to their respective maintainers.
+Out of scope: third-party services we merely link to or fetch assets from
+(Transient Labs, glifs.art, x.com) — report issues in those to their respective
+maintainers.
 
 ## Known advisories
 

@@ -16,33 +16,19 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background: #fff;
+  background: #F9F8F5; /* GLiFS canvas — matches the glif-tile background */
   color: #111;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* NYC map backdrop — static image, CSS-transformed (no tile loading) */
-.tg-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform-origin: 0 0;
-  will-change: transform;
-  max-width: none;
-  opacity: 0.9;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Left side-panel surface — a clean vertical break between nav and map */
+/* Left side-panel surface — a clean vertical break between nav and the glifs */
 .tg-sidebar {
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   width: 296px;
-  background: #f6f4ee;
+  background: #F9F8F5;
   border-right: 2px solid #1c2b50;
   z-index: 8;
 }
@@ -265,23 +251,6 @@ body {
   text-align: left;
 }
 
-/* Map data attribution (ODbL requires visible credit) */
-.tg-attrib {
-  margin: 0;
-  font-family: var(--font-future), "Orbitron", system-ui, sans-serif;
-  font-size: 8.5px;
-  line-height: 1.7;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #8a8a8a;
-}
-.tg-attrib a {
-  color: #6a6a6a;
-  text-decoration: underline;
-}
-.tg-attrib a:hover {
-  color: #222;
-}
 
 /* Edit-collections button (sidebar) */
 .tg-editbtn {

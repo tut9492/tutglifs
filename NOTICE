@@ -15,16 +15,6 @@ any of it removed or changed, open an issue (or contact @tuteth_) and we'll act
 promptly. (`npm run setup` can also (re)build the local image set from the
 official public sources.)
 
-Map data & basemap
-------------------
-- Map data © OpenStreetMap contributors, available under the Open Database
-  License (ODbL): https://www.openstreetmap.org/copyright
-- Basemap built with Protomaps (https://protomaps.com) and the
-  protomaps-themes-base style. Natural Earth data is in the public domain.
-- The committed `public/map/nyc.pmtiles` is an extract of the above open data,
-  and `public/map/nyc.png` (the backdrop the site displays) is rendered from it.
-  Attribution is shown on the site itself, as ODbL requires.
-
 Fonts (Google Fonts, SIL Open Font License 1.1)
 -----------------------------------------------
 - Fredoka — used for the collection pills
@@ -38,5 +28,5 @@ The "tut" mark (public/tut-logo.png) is © tut (@tuteth_).
 
 Libraries
 ---------
-Next.js, React, MapLibre GL JS, pmtiles, protomaps-themes-base, sharp, Tailwind
-CSS — each under its own open-source license (see node_modules/<pkg>/LICENSE).
+Next.js, React, sharp, Tailwind CSS — each under its own open-source license
+(see node_modules/<pkg>/LICENSE).

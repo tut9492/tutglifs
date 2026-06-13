@@ -4,12 +4,6 @@ import { useEffect, useRef, useState, useCallback, useMemo, type CSSProperties }
 import { CATEGORIES } from "@/data/categories";
 import EditCategories from "@/components/EditCategories";
 
-// Static NYC backdrop (a pre-rendered image — no live tile loading). Panned and
-// scaled with CSS so it stays coupled to the glif grid. Natural pixel size:
-const MAP_SRC = "/map/nyc.png";
-const IMG_W = 3000;
-const IMG_H = 1950;
-
 const COLS = 20;
 const ROWS = 15; // 20 x 15 = 300
 const GAP = 3; // px between glifs — constant at every zoom
@@ -25,25 +19,6 @@ type Glif = {
 };
 
 type View = { tile: number; x: number; y: number };
-type ImgView = { scale: number; x: number; y: number };
-
-// Smallest image scale that still fully covers the viewport (with a little margin).
-function coverScale(vw: number, vh: number): number {
-  return Math.max(vw / IMG_W, vh / IMG_H) * 1.06;
-}
-
-// Keep the backdrop always covering the viewport: floor its scale at cover and
-// clamp its offset so an edge can never show (no white border on zoom-out).
-function clampImg(iv: ImgView): ImgView {
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-  const scale = Math.max(coverScale(vw, vh), iv.scale);
-  const w = IMG_W * scale;
-  const h = IMG_H * scale;
-  const x = Math.max(vw - w, Math.min(0, iv.x));
-  const y = Math.max(vh - h, Math.min(0, iv.y));
-  return { scale, x, y };
-}
 
 const OVERRIDES_KEY = "tutglifs:overrides:v1";
 
@@ -75,21 +50,15 @@ export default function GlifMap() {
   const [glifs, setGlifs] = useState<Glif[]>([]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [view, setView] = useState<View>({ tile: 40, x: 0, y: 0 });
-  const [img, setImg] = useState<ImgView>({ scale: 1, x: 0, y: 0 });
   const [hover, setHover] = useState<number | null>(null);
   const [editing, setEditing] = useState(false);
 
-  // Latest view/img for event handlers. Updated ONLY via applyView/applyImg
-  // (never during render — see react-hooks/refs).
+  // Latest view for event handlers. Updated ONLY via applyView (never during
+  // render — see react-hooks/refs).
   const viewRef = useRef<View>({ tile: 40, x: 0, y: 0 });
-  const imgRef = useRef<ImgView>({ scale: 1, x: 0, y: 0 });
   const applyView = useCallback((v: View) => {
     viewRef.current = v;
     setView(v);
-  }, []);
-  const applyImg = useCallback((iv: ImgView) => {
-    imgRef.current = iv;
-    setImg(iv);
   }, []);
 
   // pill counts derived from current glifs (updates live during edits)
@@ -102,45 +71,34 @@ export default function GlifMap() {
     return c;
   }, [glifs]);
 
-  // Gestures accumulate into `pending` and are applied to BOTH the grid and the
-  // coupled backdrop image ONCE per animation frame (keeps the 300-tile grid from
-  // re-rendering on every wheel/drag event). The image is just CSS-transformed —
-  // no tile loading, ever.
+  // Gestures accumulate into `pending` and are applied to the grid ONCE per
+  // animation frame (keeps the 300-tile grid from re-rendering on every
+  // wheel/drag event).
   const pendingRef = useRef({ zf: 1, zpx: 0, zpy: 0, pdx: 0, pdy: 0, raf: 0 });
 
   const flush = useCallback(() => {
     const p = pendingRef.current;
     p.raf = 0;
     let v = viewRef.current;
-    let iv = imgRef.current;
 
     if (p.zf !== 1) {
       const next = Math.min(MAX_TILE, Math.max(MIN_TILE, v.tile * p.zf));
       if (next !== v.tile) {
-        const eff = next / v.tile;
         const ux = (p.zpx - v.x) / (v.tile + GAP);
         const uy = (p.zpy - v.y) / (v.tile + GAP);
         v = { tile: next, x: p.zpx - ux * (next + GAP), y: p.zpy - uy * (next + GAP) };
-        // scale the backdrop by the same factor about the same point
-        iv = {
-          scale: iv.scale * eff,
-          x: p.zpx - (p.zpx - iv.x) * eff,
-          y: p.zpy - (p.zpy - iv.y) * eff,
-        };
       }
       p.zf = 1;
     }
 
     if (p.pdx || p.pdy) {
       v = { ...v, x: v.x + p.pdx, y: v.y + p.pdy };
-      iv = { ...iv, x: iv.x + p.pdx, y: iv.y + p.pdy };
       p.pdx = 0;
       p.pdy = 0;
     }
 
     applyView(v);
-    applyImg(clampImg(iv));
-  }, [applyView, applyImg]);
+  }, [applyView]);
 
   const schedule = useCallback(() => {
     const p = pendingRef.current;
@@ -152,7 +110,7 @@ export default function GlifMap() {
   }, []);
 
   // Default view: whole table visible (contained), centered in the space to the
-  // right of the left sidebar, with the map showing around it.
+  // right of the left sidebar.
   const fitTable = useCallback((): View => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
@@ -169,14 +127,6 @@ export default function GlifMap() {
       x: Math.round(SIDEBAR + (vw - SIDEBAR - gridW) / 2),
       y: Math.round((vh - gridH) / 2),
     };
-  }, []);
-
-  // Backdrop image sized to cover the viewport, centered.
-  const fitImg = useCallback((): ImgView => {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const scale = coverScale(vw, vh);
-    return clampImg({ scale, x: (vw - IMG_W * scale) / 2, y: (vh - IMG_H * scale) / 2 });
   }, []);
 
   // --- load glifs (applying locally-saved edits), then fit the initial view.
@@ -197,22 +147,18 @@ export default function GlifMap() {
         }
         setGlifs(sortGlifs(data));
         applyView(fitTable());
-        applyImg(fitImg());
       });
     return () => {
       cancelled = true;
     };
-  }, [applyView, applyImg, fitTable, fitImg]);
+  }, [applyView, fitTable]);
 
   // Re-fit on window resize (listener only — no state set during the effect body).
   useEffect(() => {
-    const onResize = () => {
-      applyView(fitTable());
-      applyImg(fitImg());
-    };
+    const onResize = () => applyView(fitTable());
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [applyView, applyImg, fitTable, fitImg]);
+  }, [applyView, fitTable]);
 
   // queue a zoom about a screen point (applied on the next frame by flush())
   const zoomAbout = useCallback(
@@ -328,19 +274,6 @@ export default function GlifMap() {
 
   return (
     <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        className="tg-backdrop"
-        src={MAP_SRC}
-        alt=""
-        aria-hidden="true"
-        draggable={false}
-        style={{
-          width: IMG_W,
-          height: IMG_H,
-          transform: `translate(${img.x}px, ${img.y}px) scale(${img.scale})`,
-        }}
-      />
       <div className="tg-sidebar" aria-hidden="true" />
       <div ref={stageRef} className="tg-stage">
         <div

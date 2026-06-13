@@ -13,8 +13,7 @@
 //   public/glifs-static/<1..300>.png   192px first-frame thumbnails (the grid)
 //   public/glifs-logo.gif              the GLiFS wordmark (top-left logo)
 //
-// The NYC backdrop (public/map/nyc.png, rendered from OpenStreetMap-derived data)
-// is committed and not touched here.
+// (The glifs sit on a plain canvas — there is no map backdrop.)
 
 import { mkdir, access, writeFile, readFile } from "node:fs/promises";
 import { constants } from "node:fs";

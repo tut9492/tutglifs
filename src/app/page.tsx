@@ -50,16 +50,6 @@ function Credit() {
       <p className="tg-footnote">
         not an official GLiFS site · open source · no wallet connect, ever
       </p>
-      <p className="tg-attrib">
-        map ©{" "}
-        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">
-          OpenStreetMap
-        </a>{" "}
-        contributors ·{" "}
-        <a href="https://protomaps.com" target="_blank" rel="noopener noreferrer">
-          Protomaps
-        </a>
-      </p>
     </div>
   );
 }
